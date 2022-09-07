@@ -1,5 +1,7 @@
-// Style resetting
+// Import presets
+@import "./presets.scss";
 
+// Style resetting
 *,
 *::before,
 *::after {
@@ -63,4 +65,14 @@ select {
   html:focus-within {
     scroll-behavior: auto;
   }
+}
+
+// Adding font family
+
+body {
+  font-family: $ff-body;
+}
+
+h1 {
+  font-family: $ff-primary;
 }

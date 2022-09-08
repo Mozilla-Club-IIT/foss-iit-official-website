@@ -168,7 +168,18 @@
   .footer {
     gap: 3rem;
     grid-template-columns: 1.5fr 1fr 1fr;
-
+    .section1 {
+      .clubLogos {
+        gap: 0.5rem;
+        grid-template-columns: repeat(3, 3.5rem);
+        img {
+          width: 3.5rem;
+        }
+      }
+      .heading {
+        margin-bottom: 0.5rem;
+      }
+    }
     .section2 {
       .linkColumns {
         gap: 1rem;

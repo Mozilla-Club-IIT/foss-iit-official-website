@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 2.5%;
+
+  .teamImage {
+    width: 400px;
+    padding: 2.5rem 0;
+  }
+
+  .scrollIcon {
+    width: 30px;
+  }
+
+  @media (max-width: 50em) {
+    .teamImage {
+      width: 300px;
+      padding: 2rem 0;
+    }
+    .scrollIcon {
+      padding-top: 2rem;
+      width: 30px;
+    }
+  }
+
+  @media (max-width: 36em) {
+    .teamImage {
+      width: 200px;
+      padding: 1.5rem 0;
+    }
+    .scrollIcon {
+      padding-top: 1.5rem;
+      width: 20px;
+    }
+  }
+}

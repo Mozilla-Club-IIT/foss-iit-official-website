@@ -1,0 +1,101 @@
+@import "../scss/presets.scss";
+
+@mixin social {
+  transition: color 0.3s ease;
+}
+
+$line-space: 1rem;
+
+.personCard {
+  background-color: white;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: $radius-sm;
+
+  width: 23rem;
+
+  padding: 2rem 2rem;
+  img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .detailContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin-top: $line-space;
+
+    .socialIcons {
+      display: flex;
+      margin-top: $line-space;
+      gap: 1rem;
+
+      a {
+        text-decoration: none;
+        color: $clr-nutral-1000;
+
+        .facebookIcon,
+        .twitterIcon,
+        .linkedInIcon,
+        .instaIcon,
+        .gitIcon,
+        .ytIcon {
+          @include social();
+        }
+
+        &:hover .facebookIcon {
+          color: #3b5998;
+        }
+        &:hover .twitterIcon {
+          color: #1da1f2;
+        }
+        &:hover .linkedInIcon {
+          color: #0072b1;
+        }
+        &:hover .instaIcon {
+          color: #8a3ab9;
+        }
+        &:hover .gitIcon {
+          color: $clr-git;
+        }
+        &:hover .ytIcon {
+          color: #c4302b;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 50em) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .personCard {
+    flex-direction: row;
+    width: 100%;
+    gap: 2rem;
+
+    .detailContainer {
+      text-align: left;
+      align-items: flex-start;
+      justify-content: center;
+
+      margin-top: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 53.125em) {
+  .personCard {
+    width: 53rem;
+  }
+}

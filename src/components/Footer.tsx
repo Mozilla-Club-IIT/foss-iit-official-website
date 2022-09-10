@@ -5,11 +5,13 @@ import mozillaClubLogo from "../assets/logos/Mozilla club logo.png";
 import fossLogo from "../assets/logos/FOSS IIT logo.png";
 import womenFossLogo from "../assets/logos/WIF logo.png";
 
-import { BsFacebook } from "react-icons/bs";
-import { BsTwitter } from "react-icons/bs";
+import {
+  BsFacebook,
+  BsInstagram,
+  BsArrowRight,
+  BsTwitter,
+} from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
-import { BsInstagram } from "react-icons/bs";
-import { BsArrowRight } from "react-icons/bs";
 
 function footer() {
   return (
@@ -33,6 +35,7 @@ function footer() {
         </div>
         <div className={Styles.section2}>
           <h4>Useful Links</h4>
+          {/* Need to route all these links */}
           <div className={Styles.linkColumns}>
             <div className={Styles.column}>
               <a href="#">Join Us</a>
@@ -78,6 +81,7 @@ function footer() {
       <div className={Styles.copyrights}>
         <p>
           Copyright © 2022 | Meet the <a href="#">devs</a>
+          {/* Need to route */}
         </p>
       </div>
     </footer>

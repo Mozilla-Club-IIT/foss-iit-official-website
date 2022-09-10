@@ -1,9 +1,10 @@
 import React from "react";
-import AboutUs from "./pages/AboutUs";
-import "./scss/global.scss"; //This is style reset scss
+import logo from "./logo.svg";
+import MeetDevs from "./pages/MeetDevs";
+import "./scss/global.scss";
 
 function App() {
-  return <AboutUs />;
+  return <MeetDevs />;
 }
 
 export default App;

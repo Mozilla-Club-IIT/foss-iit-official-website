@@ -1,7 +1,14 @@
 import React from "react";
+import Hero from "../components/about/Hero";
+import Footer from "../components/Footer";
 
 function AboutUs() {
-  return <div>AboutUs</div>;
+  return (
+    <div>
+      <Hero />
+      <Footer />
+    </div>
+  );
 }
 
 export default AboutUs;

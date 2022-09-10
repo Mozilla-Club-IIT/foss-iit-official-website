@@ -1,8 +1,8 @@
 import React from "react";
 import Styles from "../../scss/about/hero.module.scss";
-import heroSVG from "../../assets/SVG/about-page.svg";
-import background from "../../assets/SVG/background.svg";
-import scrollIcon from "../../assets/SVG/scroll.svg";
+import heroSVG from "../../assets/svg/about-page.svg";
+import background from "../../assets/svg/background.svg";
+import scrollIcon from "../../assets/svg/scroll.svg";
 
 function hero() {
   return (

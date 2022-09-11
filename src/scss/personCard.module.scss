@@ -14,10 +14,9 @@ $line-space: 1rem;
   align-items: center;
 
   border-radius: $radius-sm;
-
   width: 23rem;
-
   padding: 2rem 2rem;
+
   img {
     width: 10rem;
     height: 10rem;
@@ -91,11 +90,24 @@ $line-space: 1rem;
 
       margin-top: 0;
     }
+
+    &:nth-child(even) {
+      justify-content: flex-end;
+      img {
+        order: 2;
+      }
+
+      .detailContainer {
+        order: 1;
+        text-align: right;
+        align-items: flex-end;
+      }
+    }
   }
 }
 
 @media only screen and (min-width: 53.125em) {
   .personCard {
-    width: 53rem;
+    width: 48rem;
   }
 }

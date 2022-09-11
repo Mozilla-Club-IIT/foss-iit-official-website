@@ -83,7 +83,7 @@ h1 {
 }
 
 h2 {
-  font-size: $fs-700;
+  font-size: $fs-800;
   font-weight: $fw-bold;
 }
 
@@ -103,6 +103,24 @@ p {
 }
 
 // Setting up font sizes to mobile devices
+@media (max-width: 50em) {
+  h1 {
+    font-size: $fs-800;
+  }
+
+  h2 {
+    font-size: $fs-700;
+  }
+
+  h3 {
+    font-size: $fs-600;
+  }
+
+  h4 {
+    font-size: $fs-300;
+  }
+}
+
 @media (max-width: 36em) {
   h1 {
     font-size: $fs-700;
@@ -118,5 +136,8 @@ p {
 
   h4 {
     font-size: $fs-300;
+  }
+  p {
+    font-size: $fs-100;
   }
 }

@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import Hero from "../components/about/Hero";
+import Footer from "../components/Footer";
+import TheTeam from "../components/devs/TheTeam";
 
-const AboutUs = () => {
+function AboutUs() {
   return (
-    <div>AboutUs</div>
-  )
+    <div>
+      <Hero />
+      <TheTeam />
+      <Footer />
+    </div>
+  );
 }
 
-export default AboutUs
+export default AboutUs;
+

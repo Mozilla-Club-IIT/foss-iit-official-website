@@ -1,3 +1,4 @@
+
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -7,6 +8,7 @@ import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import MeetDevs from './pages/MeetDevs';
 import Navbar from './Components/Navbar';
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
       </BrowserRouter>
     </div>
   );
+
 }
 
 export default App;

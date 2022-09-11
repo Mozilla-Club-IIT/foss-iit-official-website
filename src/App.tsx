@@ -1,3 +1,4 @@
+
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -6,6 +7,7 @@ import Homepage from './pages/Homepage';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import MeetDevs from './pages/MeetDevs';
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       </BrowserRouter>
     </div>
   );
+
 }
 
 export default App;

@@ -1,0 +1,46 @@
+.container {
+    padding: 0 10vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header {
+    color: #1E2944;
+    font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media screen and (max-width: 50em){
+        font-size: 2em;   
+    }
+}
+
+.details {
+    color: #1E2944;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 50em){
+        flex-direction: column;   
+    }
+}
+
+.paragraphs {
+    width: 40vw;
+    font-size: 1.1em;
+
+    @media screen and (max-width: 50em){
+        width: 100%;   
+        font-size: 1em;
+    }
+}
+
+.whoWeAreImg {
+    padding-left: 15vw;
+
+    @media screen and (max-width: 50em){
+        display: none;
+        padding-left: 0;   
+    }
+}

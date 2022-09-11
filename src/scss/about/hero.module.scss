@@ -1,6 +1,7 @@
 @import "../presets.scss";
 @import "../global.scss";
 $base: 0.6rem;
+
 .container {
   display: flex;
   flex-direction: column;
@@ -11,22 +12,58 @@ $base: 0.6rem;
 
   h1 {
     text-transform: uppercase;
-    font-size: $fs-700;
   }
 
   .heroSVG {
     width: 600px;
     padding: 2.5rem 0;
+    margin-bottom: 1.5rem;
   }
 
   // .scrollIcon {
   //   width: 30px;
   // }
 
+  .arrow span {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-bottom: 3.5px solid #000000;
+    border-right: 3.5px solid #000000;
+    transform: rotate(45deg);
+    margin: -15px;
+    animation: animate 2s infinite;
+  }
+
+  .arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+
+  .arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+  }
+
   @media (max-width: 50em) {
     .heroSVG {
-      width: 200px;
+      width: 400px;
       padding: 2rem 0;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      font-size: $fs-700;
+    }
+
+    .arrow span {
+      display: block;
+      width: 15px;
+      height: 15px;
+      border-bottom: 2.5px solid #000000;
+      border-right: 2.5px solid #000000;
+      transform: rotate(45deg);
+      margin: -8px;
+      animation: animate 2s infinite;
     }
     // .scrollIcon {
     //   padding-top: 2rem;
@@ -36,8 +73,24 @@ $base: 0.6rem;
 
   @media (max-width: 36em) {
     .heroSVG {
-      width: 200px;
+      width: 350px;
       padding: 1.5rem 0;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      font-size: $fs-600;
+    }
+    .arrow span {
+      display: block;
+      width: 18px;
+      height: 18px;
+      border-bottom: 2.5px solid #000000;
+      border-right: 2.5px solid #000000;
+      transform: rotate(45deg);
+      margin: -13px;
+      animation: animate 2s infinite;
     }
     // .scrollIcon {
     //   padding-top: 1.5rem;
@@ -45,22 +98,7 @@ $base: 0.6rem;
     // }
   }
 
-  .arrow span {
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-bottom: 4.5px solid #000000;
-    border-right: 4.5px solid #000000;
-    transform: rotate(45deg);
-    margin: -20px;
-    animation: animate 2s infinite;
-  }
-  .arrow span:nth-child(2) {
-    animation-delay: -0.2s;
-  }
-  .arrow span:nth-child(3) {
-    animation-delay: -0.4s;
-  }
+  // Scroll icon animation
   @keyframes animate {
     0% {
       opacity: 0;

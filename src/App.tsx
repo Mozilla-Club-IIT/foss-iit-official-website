@@ -6,11 +6,13 @@ import Homepage from './pages/Homepage';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import MeetDevs from './pages/MeetDevs';
+import Navbar from './Components/Navbar';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <Navbar />
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='/about' element={<AboutUs />} />

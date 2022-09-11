@@ -37,36 +37,66 @@ function PersonCard(props: propType) {
         </div>
         <div className={Styles.socialIcons}>
           {props.fb && (
-            <a href={props.fb} target="_blank" className={Styles.icon}>
+            <a
+              href={props.fb}
+              target="_blank"
+              rel="noreferrer"
+              className={Styles.icon}
+            >
               <BsFacebook className={Styles.facebookIcon} />
             </a>
           )}
           {props.twt && (
-            <a href={props.twt} target="_blank" className={Styles.icon}>
+            <a
+              href={props.twt}
+              target="_blank"
+              rel="noreferrer"
+              className={Styles.icon}
+            >
               <BsTwitter className={Styles.twitterIcon} />
             </a>
           )}
 
           {props.in && (
-            <a href={props.in} target="_blank" className={Styles.icon}>
+            <a
+              href={props.in}
+              target="_blank"
+              rel="noreferrer"
+              className={Styles.icon}
+            >
               <FaLinkedinIn className={Styles.linkedInIcon} />
             </a>
           )}
 
           {props.insta && (
-            <a href={props.insta} target="_blank" className={Styles.icon}>
+            <a
+              href={props.insta}
+              target="_blank"
+              rel="noreferrer"
+              className={Styles.icon}
+            >
               <BsInstagram className={Styles.instaIcon} />
             </a>
           )}
 
           {props.git && (
-            <a href={props.git} target="_blank" className={Styles.icon}>
+            <a
+              href={props.git}
+              target="_blank"
+              rel="noreferrer"
+              className={Styles.icon}
+            >
               <BsGithub className={Styles.gitIcon} />
             </a>
           )}
 
           {props.yt && (
-            <a href={props.yt} target="_blank" className={Styles.icon}>
+            <a
+              href={props.yt}
+              target="_blank"
+              rel="noreferrer"
+              className={Styles.icon}
+            >
               <BsYoutube className={Styles.ytIcon} />
             </a>
           )}

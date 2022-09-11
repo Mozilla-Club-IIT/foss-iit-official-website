@@ -11,7 +11,7 @@
     backdrop-filter: blur(30px);
     z-index: 999;
     top: 0;
-    width: 90vw;
+    width: 100vw;
 
     transition: 0.5s cubic-bezier(1,-0.02, 0.34, 1.01) all;
     @media screen and (max-width: 550px) {
@@ -32,12 +32,11 @@
 
 .anandaActive {
   width: 150px !important;
-  margin-right: 20px;
+  margin-right: -20px;
   transition: 0.5s ease all;
 
   @media screen and (max-width: 550px) {
-    width: 250px !important; 
-    margin-left: -25px;
+    width: 250px !important;
     position: fixed;
     // center align 
     left: 0;
@@ -83,7 +82,7 @@
     backdrop-filter: blur(30px);
       position: fixed;
       width: 100vw;
-      height: 50vh;
+      height: 110vh;
       top: 0px;
       left: 0;
       flex-direction: column;

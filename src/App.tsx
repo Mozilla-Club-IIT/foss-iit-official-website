@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "./logo.svg";
-// import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import AboutUs from "./pages/AboutUs";

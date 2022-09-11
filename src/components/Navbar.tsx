@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import  styles  from '../scss/Navbar.module.scss'
-import logos from '../Assets/Images/FOSSlogos.png'
+import logos from '../assets/images/FOSSlogos.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)

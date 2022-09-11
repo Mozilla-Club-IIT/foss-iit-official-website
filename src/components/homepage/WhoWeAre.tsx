@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../../scss/Home/WhoWeAre.module.scss'
-import WhoWeAreImg from "../../Assets/Images/whoWeAre.png"
+import WhoWeAreImg from "../../assets/images/whoWeAre.png"
 
 const WhoWeAre = () => {
   return (

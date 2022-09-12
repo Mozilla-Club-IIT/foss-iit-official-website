@@ -1,0 +1,153 @@
+@import "./presets.scss";
+
+$logo-size: 3.5rem;
+$mobile-logo-size: 3rem;
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  backdrop-filter: blur(1rem);
+  background-color: rgba(255, 255, 255, 0.256);
+  z-index: 10;
+
+  .navContainer {
+    display: flex;
+    padding: 0.5rem 8%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+
+    .navLogos {
+      display: flex;
+      gap: 0.5rem;
+      width: 100%;
+      align-items: center;
+      z-index: 10;
+
+      img {
+        width: $logo-size;
+        height: $logo-size;
+      }
+    }
+
+    .hamMenu {
+      z-index: 99;
+      justify-content: center;
+      display: none;
+      div {
+        width: 30px;
+        height: 4px;
+        background-color: $clr-accent-400;
+        margin-bottom: 4px;
+        border-radius: 5px;
+        transition: 0.5s all ease;
+      }
+    }
+
+    .navLinks {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 5%;
+      list-style: none;
+      font-size: 20px;
+      width: 100%;
+      transition: all 0.3s ease;
+      a {
+        text-decoration: none;
+        color: $clr-nutral-1000;
+        transition: color 0.4s;
+        position: relative;
+
+        &:after {
+          content: " ";
+          width: 0;
+          height: 0.2rem;
+          background-color: $clr-accent-400;
+          position: absolute;
+          bottom: -0.2rem;
+          left: 0;
+          opacity: 0;
+          transition: width 0.3s ease, opacity 0.3s ease;
+        }
+
+        &:hover:after {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+      .active::after {
+        content: " ";
+        width: 100%;
+        height: 0.2rem;
+        background-color: $clr-accent-400;
+        position: absolute;
+        bottom: -0.2rem;
+        left: 0;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 50em) {
+  nav {
+    .navContainer {
+      .navLogos {
+        img {
+          width: $mobile-logo-size;
+          height: $mobile-logo-size;
+        }
+      }
+      .navLinks {
+        opacity: 0;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+        height: 100vh;
+
+        font-size: $fs-600;
+      }
+      .hamMenu {
+        display: block;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+      }
+      .hamOpen {
+        div {
+          &:nth-child(1) {
+            transform: translateY(8px) rotate(-45deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+            transform: translateX(10px);
+          }
+          &:nth-child(3) {
+            transform: translateY(-8px) rotate(45deg);
+          }
+        }
+      }
+    }
+    .navOpen {
+      position: fixed;
+      width: 100%;
+      padding: 2rem 10%;
+      position: relative;
+      margin-bottom: 100vh;
+
+      .navLinks {
+        right: 0;
+        opacity: 1;
+      }
+    }
+  }
+}

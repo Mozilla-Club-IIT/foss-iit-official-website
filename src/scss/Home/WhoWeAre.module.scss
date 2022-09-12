@@ -1,47 +1,56 @@
 .container {
-    padding: 0 10vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  padding: 10vh 5vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .header {
-    color: #1E2944;
-    font-size: 3em;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 30px;
-
-    @media screen and (max-width: 50em){
-        font-size: 2em;   
-    }
+  color: #1e2944;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .details {
-    color: #1E2944;
-    display: flex;
-    justify-content: center;
+  color: #1e2944;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
 
-    @media screen and (max-width: 50em){
-        flex-direction: column;   
-    }
+  @media screen and (max-width: 70em) {
+    flex-direction: column;
+  }
 }
 
-.paragraphs p{
-    width: 40vw;
-    font-size: 1.1em !important;
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.paragraphs p {
+  width: 45vw;
+  font-size: 1.1em !important;
+  padding: 0.5rem 0;
 
-    @media screen and (max-width: 50em){
-        width: 100%;   
-        font-size: 1em;
-    }
+  @media screen and (max-width: 70em) {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
 }
 
 .whoWeAreImg {
-    padding-left: 15vw;
+  width: 20vw;
+  height: 20vw;
 
-    @media screen and (max-width: 50em){
-        display: none;
-        padding-left: 0;   
-    }
+  @media screen and (max-width: 70em) {
+    display: none;
+  }
+  @media screen and (max-width: 36em) {
+    display: block;
+    width: 40vw;
+    height: 40vw;
+  }
 }

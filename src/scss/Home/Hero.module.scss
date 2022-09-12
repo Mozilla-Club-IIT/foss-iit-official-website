@@ -8,7 +8,7 @@
     background-position: -200px 0;
 
     @media screen and (max-width: 60em){
-       
+       margin-top: 0;
     }
 }
 
@@ -68,11 +68,13 @@
     position: absolute;
     bottom: 0;
     width: 20vw;
-    left: 5vw;
+    // center align
+    
  
     @media screen and (max-width: 60em){
-        left: -10vw;
-        width: 50vw;
+        left: 50%;
+         transform: translateX(-50%);
+        width: 150px;
     }
 }
 
@@ -81,10 +83,12 @@
     bottom: 0;
     width: 30vw;
     right: 5vw;
+    overflow: hidden;
 
     @media screen and (max-width: 60em){
         width: 70vw;
         right: -15vw;
+        display: none;
     }
 
 }
@@ -97,6 +101,7 @@
     cursor: pointer;
 
     @media screen and (max-width: 60em){
+        display: none;
         width: 30px;   
     }
 }

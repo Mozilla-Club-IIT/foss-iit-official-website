@@ -17,6 +17,7 @@ html {
 #root {
   overflow-x: hidden;
   width: 100vw;
+  margin-top: 150px;
 }
 
 .activeNavLink {

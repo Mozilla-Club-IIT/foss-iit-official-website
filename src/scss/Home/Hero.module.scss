@@ -1,107 +1,108 @@
 .heroContainer {
-    overflow-x: hidden;
-    text-align: center;
-    margin-top: 50px;
-    min-height: 100vh;
-    background-image: url(../../assets/images/heroBG.svg);
-    background-size: cover;
-    background-position: -200px 0;
+  overflow-x: hidden;
+  text-align: center;
+  margin-top: 50px;
+  min-height: 100vh;
+  background-image: url(../../assets/images/heroBG.svg);
+  background-size: cover;
+  background-position: -200px 0;
+  position: relative;
 
-    @media screen and (max-width: 60em){
-       margin-top: 0;
-    }
+  @media screen and (max-width: 60em) {
+    margin-top: 0;
+  }
 }
 
-.mozillaText, .andText, .FOSSText {
-    color: #1E2944;
-    font-weight: bold;
-    margin-bottom: -15px;
-    margin-top: -15px;
-    font-size: 4em;
-    letter-spacing: 2px;
+.mozillaText,
+.andText,
+.FOSSText {
+  color: #1e2944;
+  font-weight: bold;
+  margin-bottom: -15px;
+  margin-top: -15px;
+  font-size: 4em;
+  letter-spacing: 2px;
 
-    @media screen and (max-width: 60em){
-        font-size: 3em;
-        margin-top: 0;
-    }
+  @media screen and (max-width: 60em) {
+    font-size: 3em;
+    margin-top: 0;
+  }
 
-    @media screen and (max-width: 36em){
-        font-size: 2em;
-        margin-top: 0;
-    }
+  @media screen and (max-width: 36em) {
+    font-size: 2em;
+    margin-top: 0;
+  }
 }
 
 .andText {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 .subText {
-    font-size: 1.5em;
-    margin-top: 50px;
+  font-size: 1.5em;
+  margin-top: 50px;
 
-    @media screen and (max-width: 60em){
-        font-size: 1em;
-        margin-top: 30px;
-    }
+  @media screen and (max-width: 60em) {
+    font-size: 1em;
+    margin-top: 30px;
+  }
 }
 
 .CTA {
-    padding: 1rem 4rem;
-    font-size: 1.4em;
-    border-radius: 1rem;
-    border: 0;
-    outline: 0;
-    background: #CA0000;
-    color: white;
-    cursor: pointer;
-    margin-top: 200px;
+  padding: 1rem 4rem;
+  font-size: 1.4em;
+  border-radius: 1rem;
+  border: 0;
+  outline: 0;
+  background: #ca0000;
+  color: white;
+  cursor: pointer;
+  margin-top: 200px;
 
-    @media screen and (max-width: 60em){
-        margin-top: 80px;
-        padding: 0.7rem 3rem;
-        font-size: 1.2em;
-        border-radius: 0.8rem;
-    }
+  @media screen and (max-width: 60em) {
+    margin-top: 80px;
+    padding: 0.7rem 3rem;
+    font-size: 1.2em;
+    border-radius: 0.8rem;
+  }
 }
 
 .heroBG1 {
-    position: absolute;
-    bottom: 0;
-    width: 20vw;
-    // center align
-    
- 
-    @media screen and (max-width: 60em){
-        left: 50%;
-         transform: translateX(-50%);
-        width: 150px;
-    }
+  position: absolute;
+  bottom: 0;
+  width: 20vw;
+  // center align
+
+  @media screen and (max-width: 60em) {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+  }
 }
 
 .heroBG2 {
-    position: absolute;
-    bottom: 0;
-    width: 30vw;
-    right: 5vw;
-    overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  width: 30vw;
+  right: 5vw;
+  overflow: hidden;
 
-    @media screen and (max-width: 60em){
-        width: 70vw;
-        right: -15vw;
-        display: none;
-    }
-
+  @media screen and (max-width: 60em) {
+    width: 70vw;
+    right: -15vw;
+    display: none;
+  }
 }
 
 .scrollButton {
-    position: absolute;
-    bottom: 5vh;
-    left: 50%;
-    transform: translateX(-50%);
-    cursor: pointer;
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
 
-    @media screen and (max-width: 60em){
-        display: none;
-        width: 30px;   
-    }
+  @media screen and (max-width: 60em) {
+    display: none;
+    width: 30px;
+  }
 }

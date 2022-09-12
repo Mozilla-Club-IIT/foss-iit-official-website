@@ -20,6 +20,11 @@ const Navbar = () => {
     prevScrollpos = currentScrollPos;
   };
 
+  const activeStyle = {
+    color: "#CA0000",
+    fontWeight: "bold",
+  }
+
   // console.log(prevScrollpos)
   return (
     <div style={{ boxShadow: tops }} className={styles.container}>
@@ -52,19 +57,29 @@ const Navbar = () => {
           }}
         >
           <li>
-            <NavLink to="/">HOME</NavLink>
+            <NavLink to="/" className={({ isActive }) =>
+              isActive ? "activeNavLink" : undefined
+            }>HOME</NavLink>
           </li>
           <li>
-            <NavLink to="/about">ABOUT</NavLink>
+            <NavLink to="/about" className={({ isActive }) =>
+              isActive ? "activeNavLink" : undefined
+            }>ABOUT</NavLink>
           </li>
           <li>
-            <NavLink to="/events">EVENTS</NavLink>
+            <NavLink to="/events" className={({ isActive }) =>
+              isActive ? "activeNavLink" : undefined
+            }>EVENTS</NavLink>
           </li>
           <li>
-            <NavLink to="/contact">CONTACT</NavLink>
+            <NavLink to="/contact" className={({ isActive }) =>
+              isActive ? "activeNavLink" : undefined
+            }>CONTACT</NavLink>
           </li>
           <li>
-            <NavLink to="/devs">DEVS</NavLink>
+            <NavLink to="/devs" className={({ isActive }) =>
+              isActive ? "activeNavLink" : undefined
+            }>DEVS</NavLink>
           </li>
         </ul>
       </div>

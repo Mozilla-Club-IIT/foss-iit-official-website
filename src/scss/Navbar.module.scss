@@ -108,6 +108,8 @@
       a {
           color: #1E2944;
           text-decoration: none;
+          transition: 0.5s ease-in-out all;
+
       }
   }
 }
@@ -190,4 +192,8 @@
 
 .hamburger.isActive div:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+.link {
+  
 }

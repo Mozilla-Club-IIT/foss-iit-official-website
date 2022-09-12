@@ -1,12 +1,12 @@
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -17,12 +17,10 @@ html {
 #root {
   overflow-x: hidden;
   width: 100vw;
-  margin-top: 150px;
 }
 
 .activeNavLink {
-    color: #CA0000 !important;
-    font-weight: 600 !important;
-    font-size: 1.1em;
-
+  color: #ca0000 !important;
+  font-weight: 600 !important;
+  font-size: 1.1em;
 }

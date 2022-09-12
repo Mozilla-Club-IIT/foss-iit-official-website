@@ -10,6 +10,10 @@ code {
     monospace;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 #root {
   overflow-x: hidden;
   width: 100vw;

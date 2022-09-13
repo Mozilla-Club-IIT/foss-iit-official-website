@@ -1,0 +1,34 @@
+@import "../scss/presets.scss";
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Debug styles
+  margin: 2rem;
+}
+
+.cardContainer {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow: scroll;
+
+  // Hide scrollbar on Firefox
+  scrollbar-width: none;
+}
+
+// Hide scrollbar on Chrome, Safari
+.cardContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.cardContainer>* {
+  flex: 0 0 auto;
+  width: 100%;
+  scroll-snap-align: center;
+
+  // Debug styles
+  background-color: lightyellow;
+  border: 1px solid black;
+}

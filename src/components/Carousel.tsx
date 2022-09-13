@@ -13,7 +13,9 @@ type propType = {
 // An array of event/blog objects will be passed into the carousel as children
 function Carousel(props: propType) {
   const [currentIndex, setCurrentIndex] = useState(0);
+
   const slidesRef = useRef<any>([]);
+  const firstRenderRef = useRef(true);
 
   const slides = props.children.map((item: any, index: number) => {
     return (
@@ -44,12 +46,17 @@ function Carousel(props: propType) {
   }
 
   useEffect(() => {
-    // Use a native DOM method to scroll to the current slide
-    slidesRef.current[currentIndex].scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-      inline: "center"
-    });
+    // Check if this is the first render
+    if (!firstRenderRef.current) {
+      // Use a native DOM method to scroll to the current slide
+      slidesRef.current[currentIndex].scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center"
+      });
+    } else {
+      firstRenderRef.current = false;
+    }
   }, [currentIndex]);
 
   return (

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { MouseEvent, useEffect, useRef, useState } from "react";
 import Styles from "../scss/Carousel.module.scss";
 
 import {
@@ -7,19 +7,19 @@ import {
 } from "react-icons/bs";
 
 type propType = {
-  children: any[]
+  children: JSX.Element[]
 };
 
 // An array of event/blog objects will be passed into the carousel as children
 function Carousel(props: propType) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [slides, setSlides] = useState<any>([]);
+  const [slides, setSlides] = useState<JSX.Element[]>([]);
 
-  const slidesRef = useRef<any>([]);
+  const slidesRef = useRef<HTMLDivElement[]>([]);
   const firstRenderRef = useRef(true);
 
   // What type is this supposed to be?
-  const prevSlide = (e: any) => {
+  const prevSlide = (e: MouseEvent) => {
     e.preventDefault();
 
     setCurrentIndex((prevState) => {
@@ -27,7 +27,7 @@ function Carousel(props: propType) {
     });
   }
 
-  const nextSlide = (e: any) => {
+  const nextSlide = (e: MouseEvent) => {
     e.preventDefault();
 
     setCurrentIndex((prevState) => {
@@ -48,11 +48,15 @@ function Carousel(props: propType) {
       firstRenderRef.current = false;
 
       // Wrap children inside slides
-      setSlides(props.children.map((item: any, index: number) => {
+      setSlides(props.children.map((item: JSX.Element, index: number) => {
         return (
           <div
             key={index}
-            ref={(ref) => { slidesRef.current.push(ref) }}
+            ref={(ref) => {
+              if (ref !== null) {
+                slidesRef.current.push(ref);
+              }
+            }}
           >
             {item}
           </div>

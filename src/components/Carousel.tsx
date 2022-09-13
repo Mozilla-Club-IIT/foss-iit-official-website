@@ -46,7 +46,7 @@ function Carousel(props: propType) {
   useEffect(() => {
     // Use a native DOM method to scroll to the current slide
     slidesRef.current[currentIndex].scrollIntoView({
-      behaviour: "smooth",
+      behavior: "smooth",
       block: "center",
       inline: "center"
     });

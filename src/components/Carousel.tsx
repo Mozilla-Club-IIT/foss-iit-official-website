@@ -13,20 +13,10 @@ type propType = {
 // An array of event/blog objects will be passed into the carousel as children
 function Carousel(props: propType) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [slides, setSlides] = useState<any>([]);
 
   const slidesRef = useRef<any>([]);
   const firstRenderRef = useRef(true);
-
-  const slides = props.children.map((item: any, index: number) => {
-    return (
-      <div
-        key={index}
-        ref={(ref) => { slidesRef.current.push(ref) }}
-      >
-        {item}
-      </div>
-    );
-  });
 
   // What type is this supposed to be?
   const prevSlide = (e: any) => {
@@ -56,6 +46,18 @@ function Carousel(props: propType) {
       });
     } else {
       firstRenderRef.current = false;
+
+      // Wrap children inside slides
+      setSlides(props.children.map((item: any, index: number) => {
+        return (
+          <div
+            key={index}
+            ref={(ref) => { slidesRef.current.push(ref) }}
+          >
+            {item}
+          </div>
+        );
+      }));
     }
   }, [currentIndex]);
 

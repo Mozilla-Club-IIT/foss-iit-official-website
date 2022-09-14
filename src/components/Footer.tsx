@@ -9,11 +9,15 @@ import {
   BsFacebook,
   BsInstagram,
   BsArrowRight,
-  BsTwitter,
+  BsYoutube,
 } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function footer() {
+  const linkClicked = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
   return (
     <footer>
       <div className={Styles.footer}>
@@ -40,7 +44,9 @@ function footer() {
             <div className={Styles.column}>
               <a href="#">Join Us</a>
               <a href="#">Events</a>
-              <a href="#">About</a>
+              <Link onClick={linkClicked} to="/about">
+                About
+              </Link>
               <a href="#">Contact Us</a>
             </div>
             <div className={Styles.column}>
@@ -62,25 +68,48 @@ function footer() {
           <div className={Styles.socials}>
             <h4>Connect with Us</h4>
             <div className={Styles.socialIcons}>
-              <div className={Styles.icon}>
-                <BsFacebook className={Styles.facebookIcon} />
-              </div>
-              <div className={Styles.icon}>
-                <BsTwitter className={Styles.twitterIcon} />
-              </div>
-              <div className={Styles.icon}>
-                <FaLinkedinIn className={Styles.linkedInIcon} />
-              </div>
-              <div className={Styles.icon}>
-                <BsInstagram className={Styles.instaIcon} />
-              </div>
+              <a
+                href="https://www.facebook.com/IITMozillaCampusClub"
+                target="_blank"
+              >
+                <div className={Styles.icon}>
+                  <BsFacebook className={Styles.facebookIcon} />
+                </div>
+              </a>
+              <a
+                href="https://www.facebook.com/IITMozillaCampusClub"
+                target="_blank"
+              >
+                <div className={Styles.icon}>
+                  <BsYoutube className={Styles.ytIcon} />
+                </div>
+              </a>
+              <a
+                href="https://www.facebook.com/IITMozillaCampusClub"
+                target="_blank"
+              >
+                <div className={Styles.icon}>
+                  <FaLinkedinIn className={Styles.linkedInIcon} />
+                </div>
+              </a>
+              <a
+                href="https://www.facebook.com/IITMozillaCampusClub"
+                target="_blank"
+              >
+                <div className={Styles.icon}>
+                  <BsInstagram className={Styles.instaIcon} />
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </div>
       <div className={Styles.copyrights}>
         <p>
-          Copyright © 2022 | Meet the <a href="#">devs</a>
+          Copyright © 2022 | Meet the{" "}
+          <Link onClick={linkClicked} to="/devs">
+            devs
+          </Link>
           {/* Need to route */}
         </p>
       </div>

@@ -16,14 +16,15 @@ function Carousel(props: propType) {
   const [slides, setSlides] = useState<JSX.Element[]>([]);
 
   const slidesRef = useRef<HTMLDivElement[]>([]);
-  const firstRenderRef = useRef(true);
 
   // What type is this supposed to be?
   const prevSlide = (e: MouseEvent) => {
     e.preventDefault();
 
     setCurrentIndex((prevState) => {
-      return (prevState === 0) ? (props.children.length - 1) : (prevState - 1);
+      const slideNum = (prevState === 0) ? (props.children.length - 1) : (prevState - 1);
+      scrollToSlide(slideNum);
+      return slideNum;
     });
   }
 
@@ -31,39 +32,37 @@ function Carousel(props: propType) {
     e.preventDefault();
 
     setCurrentIndex((prevState) => {
-      return (prevState === (props.children.length - 1)) ? 0 : (prevState + 1);
+      const slideNum = (prevState === (props.children.length - 1)) ? 0 : (prevState + 1);
+      scrollToSlide(slideNum);
+      return slideNum;
+    });
+  }
+
+  function scrollToSlide(slideNum: number) {
+    slidesRef.current[slideNum].scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center"
     });
   }
 
   useEffect(() => {
-    // Check if this is the first render
-    if (!firstRenderRef.current) {
-      // Use a native DOM method to scroll to the current slide
-      slidesRef.current[currentIndex].scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "center"
-      });
-    } else {
-      firstRenderRef.current = false;
-
-      // Wrap children inside slides
-      setSlides(props.children.map((item: JSX.Element, index: number) => {
-        return (
-          <div
-            key={index}
-            ref={(ref) => {
-              if (ref !== null) {
-                slidesRef.current.push(ref);
-              }
-            }}
-          >
-            {item}
-          </div>
-        );
-      }));
-    }
-  }, [currentIndex]);
+    // Wrap children inside slides
+    setSlides(props.children.map((item: JSX.Element, index: number) => {
+      return (
+        <div
+          key={index}
+          ref={(ref) => {
+            if (ref !== null) {
+              slidesRef.current.push(ref);
+            }
+          }}
+        >
+          {item}
+        </div>
+      );
+    }));
+  }, [props.children]);
 
   return (
     <div className={Styles.carousel}>

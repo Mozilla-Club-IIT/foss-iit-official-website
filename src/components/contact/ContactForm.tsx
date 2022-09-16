@@ -1,13 +1,14 @@
 import React from "react";
 import Styles from "../../scss/contactForm/contactForm.module.scss";
 import { BsFillTelephoneFill } from "react-icons/bs";
-import { GrDirections } from "react-icons/gr";
 import { HiMailOpen } from "react-icons/hi";
 import { BsPerson } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { MdOutlinePhone } from "react-icons/md";
 import { TiMessageTyping } from "react-icons/ti";
+import { FaMapSigns } from "react-icons/fa";
 import formsvg from "../../assets/svg/contact-form.svg";
+import { ButtonHTMLAttributes } from "react";
 
 function ContactForm() {
   return (
@@ -22,7 +23,7 @@ function ContactForm() {
         <a href="http://goo.gl/maps/AsGcfK9bQaGSModB7">
           <div className={Styles.card}>
             <div className={Styles.cardIcon}>
-              <GrDirections />
+              <FaMapSigns />
             </div>
             <h3>Address</h3>
             <p>Informatics Institute of Technology</p>
@@ -50,67 +51,64 @@ function ContactForm() {
       </div>
 
       {/* -----------------Contact form----------------- */}
-      <section className={Styles.formSection}>
+
+      <div className={Styles.contactForm}>
         <img src={formsvg} alt="form SVG" className={Styles.formSVG} />
-        <div className={Styles.contactForm}>
-          <form action="" method="get" className={Styles.form}>
-            <div className={Styles.inputField}>
-              <label htmlFor="name">Name</label>
-              <BsPerson className={Styles.formIcon} />
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Your Name"
-                form="form"
-                required
-              />
-            </div>
+        <form action="" method="get" className={Styles.form}>
+          <div className={Styles.inputField}>
+            <label htmlFor="name">Name</label>
+            <BsPerson className={Styles.formIcon} />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              pattern="[a-z]*"
+              placeholder="Your Name"
+              form={Styles.form}
+              required
+            />
+          </div>
 
-            <div className={Styles.inputField}>
-              <label htmlFor="email">Email</label>
-              <HiOutlineMail className={Styles.formIcon} />
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="someone@gmail.com"
-                form="contactField"
-                required
-              />
-            </div>
+          <div className={Styles.inputField}>
+            <label htmlFor="email">Email</label>
+            <HiOutlineMail className={Styles.formIcon} />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="someone@gmail.com"
+              form={Styles.form}
+              required
+            />
+          </div>
 
-            <div className={Styles.inputField}>
-              <label htmlFor="phone">Phone No.</label>
-              <MdOutlinePhone className={Styles.formIcon} />
-              <input
-                type="tel"
-                name="phone"
-                id="phone"
-                placeholder="+94206934691"
-                form="contactField"
-                required
-              />
-            </div>
+          <div className={Styles.inputField}>
+            <label htmlFor="phone">Phone No.</label>
+            <MdOutlinePhone className={Styles.formIcon} />
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="+94206934691"
+              form={Styles.form}
+              required
+            />
+          </div>
 
-            <div className={Styles.inputField}>
-              <label htmlFor="textarea">Message</label>
-              <TiMessageTyping className={Styles.formIcon} />
-              <textarea
-                name="textarea"
-                id="textarea"
-                form="contactField"
-                cols={2}
-                required
-              ></textarea>
-            </div>
+          <div className={Styles.inputField}>
+            <label htmlFor="textarea">Message</label>
+            <TiMessageTyping className={Styles.formIcon} />
+            <textarea name="textarea" id="textarea" form={Styles.form} required></textarea>
+          </div>
 
-            <button type="button" form="form" className={Styles.formButton}>
-              Send Messsage
-            </button>
-          </form>
-        </div>
-      </section>
+          <input
+            form={Styles.form}
+            type="submit"
+            value="Send Message"
+            className={Styles.formButton}
+          />
+        </form>
+      </div>
     </div>
   );
 }

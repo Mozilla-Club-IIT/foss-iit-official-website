@@ -8,7 +8,7 @@ import { MdOutlinePhone } from "react-icons/md";
 import { TiMessageTyping } from "react-icons/ti";
 import { FaMapSigns } from "react-icons/fa";
 import formsvg from "../../assets/svg/contact-form.svg";
-import { ButtonHTMLAttributes } from "react";
+import { isConstructorDeclaration } from "typescript";
 
 function ContactForm() {
   return (
@@ -98,15 +98,21 @@ function ContactForm() {
           <div className={Styles.inputField}>
             <label htmlFor="textarea">Message</label>
             <TiMessageTyping className={Styles.formIcon} />
-            <textarea name="textarea" id="textarea" form={Styles.form} required></textarea>
+            <textarea
+              name="textarea"
+              id="textarea"
+              form={Styles.form}
+              required
+            ></textarea>
           </div>
-
-          <input
+          <button
             form={Styles.form}
             type="submit"
-            value="Send Message"
             className={Styles.formButton}
-          />
+            value="Send Message"
+          >
+            Send Message
+          </button>
         </form>
       </div>
     </div>

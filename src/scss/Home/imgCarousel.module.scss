@@ -1,0 +1,39 @@
+@import "../presets.scss";
+
+// Styles for main carousel in homepage
+
+.container {
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .detailContainer {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 50em) {
+  .container {
+    position: relative;
+    height: 30rem;
+
+    .detailContainer {
+      position: absolute;
+      bottom: 0;
+      padding: 10rem 2rem 2rem 2rem;
+      margin-bottom: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgb(255, 255, 255) 60%
+      );
+    }
+  }
+}

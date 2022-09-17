@@ -15,7 +15,12 @@ const Homepage = () => {
       <WhoWeAre />
       <Carousel>
         {data.map((data) => (
-          <ImgCarousel key={data.id} name={data.name} image={data.image} />
+          <ImgCarousel
+            key={data.id}
+            name={data.name}
+            image={data.image}
+            des={data.description}
+          />
         ))}
       </Carousel>
       <Mission />

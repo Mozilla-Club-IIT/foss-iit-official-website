@@ -1,0 +1,347 @@
+@import "../presets.scss";
+
+@mixin social {
+  transition: color 0.3s ease;
+}
+
+.container {
+  display: flex;
+  padding: 0 0.5rem;
+  text-align: center;
+  margin-bottom: 5rem;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: $clr-nutral-1000;
+  }
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  .contactCards {
+    display: grid;
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    grid-template-columns: repeat(3, 20rem);
+
+    .card {
+      padding: 0.5rem 1rem;
+      background-color: $clr-nutral-0;
+      border-radius: $radius-sm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0px 0px 64px 0px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background-color: $clr-accent-400;
+        color: $clr-nutral-0;
+        outline: 2px solid white;
+        transition: 300ms ease;
+        border: none;
+      }
+
+      h3 {
+        font-size: $fs-600;
+      }
+      img {
+        height: 2.8rem;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        margin-bottom: 0.5rem;
+        font-size: $fs-200;
+      }
+      .cardIcon {
+        font-size: 30px;
+        margin-bottom: -10px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .contactForm {
+    background-color: $clr-nutral-0;
+    border-radius: $radius-sm;
+    box-shadow: 0px 0px 64px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 750px;
+
+    .formSVG {
+      position: absolute;
+      width: 500px;
+      transform: translate(-284px, 215px);
+    }
+
+    .form {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 600px;
+
+      .formButton {
+        margin-top: 25px;
+        width: 190px;
+        height: 40px;
+        border-radius: $radius-sm;
+        background: $clr-accent-400;
+        font-weight: $fw-bold;
+        color: $clr-nutral-0;
+        border: none;
+        z-index: 1;
+
+        &:hover {
+          background-color: $clr-nutral-0;
+          color: $clr-nutral-1000;
+          outline: 2px solid $clr-accent-400;
+          cursor: pointer;
+          transition: 0.2s ease;
+        }
+      }
+
+      .inputField {
+        z-index: 1;
+        margin-trim: 10px;
+        &:focus-within {
+          label {
+            color: $clr-nutral-1000;
+          }
+          @include social();
+          color: $clr-accent-400;
+        }
+        .formIcon {
+          display: flex;
+          transform: translate(15px, 46px);
+          font-size: 30px;
+        }
+
+        input:-webkit-autofill {
+          -webkit-background-clip: text;
+        }
+
+        input {
+          display: flex;
+          border: 2px solid;
+          width: 400px;
+          height: 60px;
+          padding-left: 55px;
+          margin-bottom: 25px;
+          background-color: $clr-nutral-0;
+          border-radius: $radius-sm;
+          font-size: $fs-300;
+          box-shadow: 0 0 5px transparent;
+
+          &:focus {
+            outline: none;
+            border: 1px solid $clr-accent-400;
+            box-shadow: 0 0 5px $clr-accent-400;
+            transition: all 0.4s ease;
+            &::-webkit-input-placeholder {
+              @include social();
+              color: $clr-accent-400;
+            }
+          }
+
+          &:hover {
+            transition: 200ms ease;
+            border: 2px solid transparent;
+            box-shadow: 0 0 5px $clr-accent-400;
+          }
+        }
+        textarea {
+          height: 200px;
+          outline: 2px solid;
+          width: 400px;
+          padding-left: 55px;
+          padding-top: 15px;
+          background-color: $clr-nutral-0;
+          border-radius: $radius-sm;
+          font-size: $fs-300;
+          resize: none;
+
+          &:focus {
+            outline: none;
+            border: 1px solid $clr-accent-400;
+            box-shadow: 0 0 5px $clr-accent-400;
+            transition: all 0.4s ease;
+          }
+
+          &:hover {
+            transition: 200ms ease;
+            outline: none;
+            border: 2px solid transparent;
+            box-shadow: 0 0 5px $clr-accent-400;
+          }
+        }
+
+        label {
+          font-size: $fs-400;
+          position: absolute;
+          transform: translate(-185px, -10px);
+          font-weight: $fw-medium;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 66.25em) {
+    .contactCards {
+      grid-template-columns: repeat(1, 30rem);
+      .card {
+        height: 15rem;
+        justify-content: center;
+      }
+    }
+
+    .contactForm {
+      width: 600px;
+      height: 750px;
+
+      .formSVG {
+        width: 400px;
+        transform: translate(-248px, 247px);
+      }
+      .form {
+        .formButton {
+          width: 190px;
+          height: 42px;
+        }
+
+        .inputField {
+          .formIcon {
+            display: flex;
+            transform: translate(15px, 46px);
+            font-size: 30px;
+          }
+          input {
+            width: 350px;
+            height: 55px;
+
+            font-size: $fs-300;
+          }
+          textarea {
+            height: 200px;
+            width: 350px;
+            font-size: $fs-300;
+          }
+
+          label {
+            font-size: $fs-300;
+            position: absolute;
+            transform: translate(-159px, -2px);
+            font-weight: $fw-medium;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 50em) {
+    h1 {
+      text-transform: uppercase;
+      font-size: $fs-700;
+    }
+    h3 {
+      font-size: $fs-400;
+    }
+
+    .contactForm {
+      width: calc(100vw - 2rem);
+      height: 750px;
+
+      .formSVG {
+        width: 400px;
+        transform: translate(-228px, 247px);
+      }
+      .form {
+        .formButton {
+          width: 165px;
+          height: 32px;
+        }
+
+        .inputField {
+          .formIcon {
+            display: flex;
+            transform: translate(15px, 40px);
+            font-size: 25px;
+          }
+          input {
+            width: 350px;
+            height: 50px;
+            font-size: $fs-200;
+          }
+          textarea {
+            height: 200px;
+            width: 350px;
+            font-size: $fs-300;
+          }
+
+          label {
+            font-size: $fs-300;
+            position: absolute;
+            transform: translate(-159px, -2px);
+            font-weight: $fw-medium;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 36em) {
+    .conatiner {
+      padding: 0 2rem;
+    }
+    h1 {
+      text-transform: uppercase;
+      font-size: $fs-600;
+    }
+    h3 {
+      font-size: $fs-300;
+    }
+    .contactCards {
+      grid-template-columns: calc(100vw - 2rem);
+    }
+
+    .contactForm {
+      width: calc(100vw - 2rem);
+      height: 750px;
+
+      .formSVG {
+        display: none;
+      }
+      .form {
+        .formButton {
+          width: 165px;
+          height: 42px;
+        }
+
+        .inputField {
+          input {
+            width: 300px;
+            height: 50px;
+            font-size: $fs-200;
+          }
+          textarea {
+            height: 200px;
+            width: 300px;
+            font-size: $fs-300;
+          }
+
+          label {
+            font-size: $fs-300;
+            position: absolute;
+            transform: translate(-135px, -2px);
+            font-weight: $fw-medium;
+          }
+        }
+      }
+    }
+  }
+}

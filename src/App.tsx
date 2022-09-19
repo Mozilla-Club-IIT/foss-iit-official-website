@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import logo from "./logo.svg";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import MeetDevs from "./pages/MeetDevs";
-import Navbar from "./components/Navbar";
+
 import Navigation from "./components/Navigation";
 import Events from "./pages/Events";
 import Footer from "./components/Footer";

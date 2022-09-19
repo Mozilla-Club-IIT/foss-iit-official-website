@@ -120,6 +120,7 @@
           display: flex;
           transform: translate(15px, 46px);
           font-size: 30px;
+          pointer-events: none;
         }
 
         input:-webkit-autofill {

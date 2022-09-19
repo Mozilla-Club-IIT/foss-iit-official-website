@@ -68,7 +68,7 @@ function Navigation() {
             </li>
             <li>
               <NavLink
-                to="/e"
+                to="/events"
                 className={({ isActive }) =>
                   isActive ? `${Styles.active}` : undefined
                 }

@@ -7,6 +7,7 @@ import ContactUs from "./pages/ContactUs";
 import MeetDevs from "./pages/MeetDevs";
 import Navbar from "./components/Navbar";
 import Navigation from "./components/Navigation";
+import Events from "./pages/Events";
 
 function App() {
   useEffect(() => {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/devs" element={<MeetDevs />} />
+          <Route path="/events" element={<Events />} />
         </Routes>
       </BrowserRouter>
     </div>

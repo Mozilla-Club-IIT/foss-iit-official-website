@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(100% - 3rem);
+  width: calc(100vw - 3rem);
 }
 
 .carouselButton {
@@ -65,8 +65,5 @@
 @media (min-width: 60em) {
   .carousel {
     width: 65rem;
-    .cardContainer {
-      // height: 30rem;
-    }
   }
 }

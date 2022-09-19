@@ -8,10 +8,8 @@ function AboutUs() {
     <div>
       <Hero />
       <TheTeam />
-      <Footer />
     </div>
   );
 }
 
 export default AboutUs;
-

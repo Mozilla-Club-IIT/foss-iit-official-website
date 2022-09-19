@@ -25,7 +25,6 @@ const Homepage = () => {
       </Carousel>
       <Mission />
       <Vision />
-      <Footer />
     </div>
   );
 };

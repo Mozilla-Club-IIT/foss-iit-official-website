@@ -10,10 +10,8 @@ function MeetDevs() {
       <HeroSection />
       <Technologies />
       <TheTeam />
-      <Footer />
     </div>
   );
 }
 
 export default MeetDevs;
-

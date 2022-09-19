@@ -118,7 +118,7 @@
         }
         .formIcon {
           display: flex;
-          transform: translate(15px, 46px);
+          transform: translate(15px, 45px);
           font-size: 30px;
           pointer-events: none;
         }
@@ -130,7 +130,7 @@
         input {
           display: flex;
           border: 2px solid;
-          width: 400px;
+          width: 500px;
           height: 60px;
           padding-left: 55px;
           margin-bottom: 25px;
@@ -158,8 +158,8 @@
         }
         textarea {
           height: 200px;
-          outline: 2px solid;
-          width: 400px;
+          border: 2px solid;
+          width: 500px;
           padding-left: 55px;
           padding-top: 15px;
           background-color: $clr-nutral-0;
@@ -185,7 +185,7 @@
         label {
           font-size: $fs-400;
           position: absolute;
-          transform: translate(-185px, -10px);
+          transform: translate(-250px, -10px);
           font-weight: $fw-medium;
         }
       }
@@ -218,25 +218,25 @@
         .inputField {
           .formIcon {
             display: flex;
-            transform: translate(15px, 46px);
+            transform: translate(15px, 43px);
             font-size: 30px;
           }
           input {
-            width: 350px;
+            width: 450px;
             height: 55px;
 
             font-size: $fs-300;
           }
           textarea {
             height: 200px;
-            width: 350px;
+            width: 450px;
             font-size: $fs-300;
           }
 
           label {
             font-size: $fs-300;
             position: absolute;
-            transform: translate(-159px, -2px);
+            transform: translate(-220px, -2px);
             font-weight: $fw-medium;
           }
         }
@@ -270,24 +270,24 @@
         .inputField {
           .formIcon {
             display: flex;
-            transform: translate(15px, 40px);
+            transform: translate(15px, 38px);
             font-size: 25px;
           }
           input {
-            width: 350px;
+            width: 450px;
             height: 50px;
             font-size: $fs-200;
           }
           textarea {
             height: 200px;
-            width: 350px;
+            width: 450px;
             font-size: $fs-300;
           }
 
           label {
             font-size: $fs-300;
             position: absolute;
-            transform: translate(-159px, -2px);
+            transform: translate(-220px, -2px);
             font-weight: $fw-medium;
           }
         }
@@ -325,20 +325,20 @@
 
         .inputField {
           input {
-            width: 300px;
+            width: 75vw;
             height: 50px;
             font-size: $fs-200;
           }
           textarea {
             height: 200px;
-            width: 300px;
+            width: 75vw;
             font-size: $fs-300;
           }
 
           label {
             font-size: $fs-300;
             position: absolute;
-            transform: translate(-135px, -2px);
+            transform: translate(-35vw, -2px);
             font-weight: $fw-medium;
           }
         }

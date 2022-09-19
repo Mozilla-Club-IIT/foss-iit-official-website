@@ -3,9 +3,9 @@ import Styles from "../../scss/contactForm/contactForm.module.scss";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { HiMailOpen } from "react-icons/hi";
 import { BsPerson } from "react-icons/bs";
-import { HiOutlineMail } from "react-icons/hi";
+import { IoMailOutline } from "react-icons/io5";
 import { MdOutlinePhone } from "react-icons/md";
-import { TiMessageTyping } from "react-icons/ti";
+import { FiMessageSquare } from "react-icons/fi";
 import { FaMapSigns } from "react-icons/fa";
 import formsvg from "../../assets/svg/contact-form.svg";
 import { isConstructorDeclaration } from "typescript";
@@ -71,7 +71,7 @@ function ContactForm() {
 
           <div className={Styles.inputField}>
             <label htmlFor="email">Email</label>
-            <HiOutlineMail className={Styles.formIcon} />
+            <IoMailOutline className={Styles.formIcon} />
             <input
               type="email"
               name="email"
@@ -89,7 +89,7 @@ function ContactForm() {
               type="tel"
               name="phone"
               id="phone"
-              placeholder="+94206934691"
+              placeholder="+94XXXXXXXXX"
               form={Styles.form}
               required
             />
@@ -97,7 +97,7 @@ function ContactForm() {
 
           <div className={Styles.inputField}>
             <label htmlFor="textarea">Message</label>
-            <TiMessageTyping className={Styles.formIcon} />
+            <FiMessageSquare className={Styles.formIcon} />
             <textarea
               name="textarea"
               id="textarea"

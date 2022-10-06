@@ -1,5 +1,6 @@
 @import "../scss/presets.scss";
 
+// Mobile styling
 .container {
   display: flex;
   justify-content: center;
@@ -48,6 +49,7 @@
   cursor: pointer;
 }
 
+// Tablet styling
 @media (min-width: 36em) {
   .carousel {
     .carouselButton {
@@ -56,6 +58,7 @@
   }
 }
 
+// Desktop styling
 @media (min-width: 50em) {
   .carousel {
     width: 50rem;

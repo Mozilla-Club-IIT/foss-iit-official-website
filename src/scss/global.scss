@@ -103,7 +103,7 @@ p {
   font-weight: $fw-regular;
 }
 
-// Setting up font sizes to mobile devices
+// Setting up font sizes to tablets
 @media (max-width: 50em) {
   h1 {
     font-size: $fs-800;
@@ -122,6 +122,7 @@ p {
   }
 }
 
+// Setting up font sizes to mobile devices
 @media (max-width: 36em) {
   h1 {
     font-size: $fs-700;

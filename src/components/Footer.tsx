@@ -15,12 +15,14 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function footer() {
+  // Scroll to top function when clicking on footer link
   const linkClicked = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
   return (
     <footer>
       <div className={Styles.footer}>
+        {/* ---------- Footer section 1 ---------------- */}
         <div className={Styles.section1}>
           <div className={Styles.clubLogos}>
             <img src={mozillaClubLogo} alt="" />
@@ -37,6 +39,8 @@ function footer() {
             skills.
           </p>
         </div>
+
+        {/* ---------- Footer section 2 ---------------- */}
         <div className={Styles.section2}>
           <h4>Useful Links</h4>
           {/* Need to route all these links */}
@@ -55,6 +59,8 @@ function footer() {
             </div>
           </div>
         </div>
+
+        {/* ---------- Footer section 3 ---------------- */}
         <div className={Styles.section3}>
           <div className={Styles.subscribe}>
             <h4>Subscribe</h4>
@@ -65,6 +71,8 @@ function footer() {
               </div>
             </div>
           </div>
+
+          {/* Social icons */}
           <div className={Styles.socials}>
             <h4>Connect with Us</h4>
             <div className={Styles.socialIcons}>
@@ -104,6 +112,8 @@ function footer() {
           </div>
         </div>
       </div>
+
+      {/* Copyright section */}
       <div className={Styles.copyrights}>
         <p>
           Copyright © 2022 | Meet the{" "}

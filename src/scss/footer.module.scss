@@ -1,5 +1,11 @@
 @import "./presets.scss";
 
+@mixin socialHover($clr) {
+  border: $clr 2px solid;
+  background-color: $clr;
+}
+
+// Mobile styling
 .footer {
   padding: 2rem 3%;
   background-color: $clr-nutral-0;
@@ -7,6 +13,7 @@
   gap: 1.5rem;
   box-shadow: 0px -6px 116px 0px rgba(0, 0, 0, 0.1);
 
+  // Styling for footer logos and club description
   .section1 {
     .clubLogos {
       display: grid;
@@ -29,6 +36,7 @@
     }
   }
 
+  // Link section styling
   .section2 {
     h4 {
       font-weight: $fw-bold;
@@ -68,6 +76,7 @@
     }
   }
 
+  // Newsletter and social section styling
   .section3 {
     .subscribe {
       h4 {
@@ -130,27 +139,25 @@
             border-radius: 50%;
             transition: color 0.3s ease;
           }
+
+          // Social icon hover effect
           &:nth-child(1):hover .icon {
-            border: #3b5998 2px solid;
-            background-color: #3b5998;
+            @include socialHover(#3b5998);
             color: $clr-nutral-0;
           }
 
           &:nth-child(2):hover .icon {
-            border: #ff0000 2px solid;
-            background-color: #ff0000;
+            @include socialHover(#ff0000);
             color: $clr-nutral-0;
           }
 
           &:nth-child(3):hover .icon {
-            border: #0072b1 2px solid;
-            background-color: #0072b1;
+            @include socialHover(#0072b1);
             color: $clr-nutral-0;
           }
 
           &:nth-child(4):hover .icon {
-            border: #8a3ab9 2px solid;
-            background-color: #8a3ab9;
+            @include socialHover(#8a3ab9);
             color: $clr-nutral-0;
           }
         }
@@ -159,12 +166,14 @@
   }
 }
 
+// Tablet styling
 @media (min-width: 36em) {
   .footer {
     grid-template-columns: 1fr 1fr;
   }
 }
 
+// Desktop styling
 @media (min-width: 50em) {
   .footer {
     gap: 3rem;
@@ -189,6 +198,7 @@
   }
 }
 
+// Footer copyright section
 .copyrights {
   background-color: #ebebeb;
   padding: 0.2rem 0;

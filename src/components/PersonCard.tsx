@@ -36,6 +36,7 @@ function PersonCard(props: propType) {
           <p>{props.quote}</p>
         </div>
         <div className={Styles.socialIcons}>
+          {/* Shows social icons for avalible social links */}
           {props.fb && (
             <a
               href={props.fb}

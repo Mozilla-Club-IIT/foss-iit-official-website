@@ -15,6 +15,7 @@ function technologies() {
     <div className={Styles.container}>
       <h2>Technologies used</h2>
 
+      {/* 4 card section with letters for MERN */}
       <div className={Styles.mernCards}>
         <div className={Styles.card}>
           <h3>M</h3>
@@ -37,6 +38,8 @@ function technologies() {
           <p>Node.js</p>
         </div>
       </div>
+
+      {/* Two column layout for other technologies */}
       <div className={Styles.subTech}>
         <div className={Styles.card}>
           <img src={typeScriptLogo} alt="" />
@@ -48,6 +51,7 @@ function technologies() {
         </div>
       </div>
 
+      {/* Git repo link */}
       <div className={Styles.gitSection}>
         <div className={Styles.pointerArrowContainer}>
           <p>Take a sneak peek...</p>

@@ -1,11 +1,14 @@
 @import "../scss/presets.scss";
 
+// hover transition type color and ease
 @mixin social {
   transition: color 0.3s ease;
 }
 
+// Line space varibale
 $line-space: 1rem;
 
+// Mobile styling
 .personCard {
   background-color: white;
   box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
@@ -73,7 +76,8 @@ $line-space: 1rem;
   }
 }
 
-@media only screen and (min-width: 50em) {
+// Desktop styling
+@media (min-width: 50em) {
   .container {
     flex-direction: column;
     align-items: center;
@@ -91,6 +95,7 @@ $line-space: 1rem;
       margin-top: 0;
     }
 
+    // Change card style when card has even index number
     &:nth-child(even) {
       justify-content: flex-end;
       img {
@@ -106,7 +111,8 @@ $line-space: 1rem;
   }
 }
 
-@media only screen and (min-width: 53.125em) {
+// Give fixed with to the card
+@media (min-width: 53.125em) {
   .personCard {
     width: 48rem;
   }

@@ -1,5 +1,6 @@
 @import "../presets.scss";
 
+// Mobile styling
 .container {
   text-align: center;
   display: flex;
@@ -45,6 +46,7 @@
     }
   }
 
+  // Tablet styling
   @media (min-width: 36em) {
     .img1 {
       width: 18rem;
@@ -59,6 +61,7 @@
     }
   }
 
+  // Dekstop styling
   @media (min-width: 50em) {
     .img1 {
       position: absolute;

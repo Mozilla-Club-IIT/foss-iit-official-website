@@ -12,7 +12,7 @@ type propType = {
 };
 
 function eventCarousel(props: propType) {
-  // Setup date to use in carousel
+  // Shortned month names to use in event carousel
   const monthStr = [
     "Jan",
     "Feb",
@@ -27,17 +27,18 @@ function eventCarousel(props: propType) {
     "Nov",
     "Dec",
   ];
+
+  // Setup date to use in carousel
   const eventDate = new Date(`${props.date}`);
   const day = eventDate.getDate();
   const month = monthStr[eventDate.getMonth()];
   const year = eventDate.getFullYear();
 
-  // Check status whether the event is past event or not
-
   return (
     <div className={Styles.container}>
       <div className={Styles.imgDateContainer}>
         <img src={props.image} alt="" />
+        {/* Check whether the event is past event or not and add specific class name */}
         <div
           className={
             props.pastEvent

@@ -1,8 +1,10 @@
 @import "./presets.scss";
 
+// Local variables
 $logo-size: 3.5rem;
 $mobile-logo-size: 3rem;
 
+// Desktop styling
 nav {
   position: fixed;
   width: 100%;
@@ -61,6 +63,7 @@ nav {
         transition: color 0.4s;
         position: relative;
 
+        // Underline appear effect on hover
         &:after {
           content: " ";
           width: 0;
@@ -78,6 +81,8 @@ nav {
           opacity: 1;
         }
       }
+
+      // Underlined on active link
       .active::after {
         content: " ";
         width: 100%;
@@ -92,6 +97,7 @@ nav {
   }
 }
 
+// Tablet and mobile styling
 @media (max-width: 50em) {
   nav {
     .navContainer {
@@ -117,6 +123,8 @@ nav {
 
         font-size: $fs-600;
       }
+
+      // Hamburger icon animation
       .hamMenu {
         display: block;
         transition: opacity 0.3s ease, transform 0.3s ease;

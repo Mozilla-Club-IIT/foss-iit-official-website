@@ -8,9 +8,10 @@ import Styles from "../scss/navigation.module.scss";
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Action when clicking on link in nav bar
   const linkClick = () => {
-    isOpen ? setIsOpen(!isOpen) : setIsOpen(isOpen);
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    isOpen ? setIsOpen(!isOpen) : setIsOpen(isOpen); // This checks whether mobile navigation bar is open and close the mobile navbar if user click on a link
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); // This scrolls the website to the top when user click on a link in nav bar
   };
 
   return (

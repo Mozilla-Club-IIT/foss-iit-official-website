@@ -1,5 +1,6 @@
 @import "../presets.scss";
 
+// Mobile styling
 .container {
   display: flex;
   flex-direction: column;
@@ -23,11 +24,6 @@
       background-color: $clr-accent-400;
       min-width: 30%;
       border-radius: $radius-sm;
-
-      //   display: flex;
-      //   flex-direction: column;
-      //   align-items: center;
-      //   justify-content: center;
 
       color: $clr-nutral-0;
 
@@ -84,6 +80,7 @@
     }
   }
 
+  // Tablet styling
   @media (min-width: 36em) {
     .imgDateContainer {
       .dateContainer {
@@ -117,6 +114,7 @@
     }
   }
 
+  // Desktop sizing
   @media (min-width: 40em) {
     flex-direction: row;
     min-height: 18rem;

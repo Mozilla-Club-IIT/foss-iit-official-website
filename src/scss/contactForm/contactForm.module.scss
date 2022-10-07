@@ -1,9 +1,11 @@
 @import "../presets.scss";
 
+//preset transition for input field webkits
 @mixin social {
   transition: color 0.3s ease;
 }
 
+//Desktop styling
 .container {
   display: flex;
   padding: 0 0.5rem;
@@ -21,6 +23,7 @@
     text-transform: uppercase;
   }
 
+  //Quick access contact cards styling
   .contactCards {
     display: grid;
     gap: 2rem;
@@ -36,6 +39,7 @@
       flex-direction: column;
       align-items: center;
       box-shadow: 0px 0px 64px 0px rgba(0, 0, 0, 0.1);
+      transition: 200ms ease-in-out;
 
       &:hover {
         background-color: $clr-accent-400;
@@ -64,6 +68,7 @@
     }
   }
 
+  //Contact form styling
   .contactForm {
     background-color: $clr-nutral-0;
     border-radius: $radius-sm;
@@ -72,12 +77,13 @@
     align-items: center;
     justify-content: center;
     width: 700px;
-    height: 750px;
+    height: 630px;
 
+    //Contact form "formsvg"  styling
     .formSVG {
       position: absolute;
-      width: 500px;
-      transform: translate(-284px, 215px);
+      width: 420px;
+      transform: translate(-249px, 180px);
     }
 
     .form {
@@ -86,26 +92,31 @@
       flex-direction: column;
       width: 600px;
 
+      //Submit button styling
       .formButton {
         margin-top: 25px;
-        width: 190px;
-        height: 40px;
+        margin-bottom: -5px;
+        width: 170px;
+        height: 35px;
         border-radius: $radius-sm;
         background: $clr-accent-400;
         font-weight: $fw-bold;
         color: $clr-nutral-0;
         border: none;
         z-index: 1;
+        transition: 200ms ease-in-out;
 
         &:hover {
           background-color: $clr-nutral-0;
           color: $clr-nutral-1000;
-          outline: 2px solid $clr-accent-400;
+          transition: 200ms ease-in-out;
+          border: 2px solid transparent;
+          box-shadow: 0 0 5px $clr-accent-400;
           cursor: pointer;
-          transition: 0.2s ease;
         }
       }
 
+      //Input field styling
       .inputField {
         z-index: 1;
         margin-trim: 10px;
@@ -118,8 +129,8 @@
         }
         .formIcon {
           display: flex;
-          transform: translate(15px, 45px);
-          font-size: 30px;
+          transform: translate(15px, 40px);
+          font-size: 27px;
           pointer-events: none;
         }
 
@@ -130,14 +141,15 @@
         input {
           display: flex;
           border: 2px solid;
-          width: 500px;
-          height: 60px;
+          width: 430px;
+          height: 50px;
           padding-left: 55px;
           margin-bottom: 25px;
           background-color: $clr-nutral-0;
           border-radius: $radius-sm;
-          font-size: $fs-300;
+          font-size: $fs-200;
           box-shadow: 0 0 5px transparent;
+          transition: 200ms ease-in-out;
 
           &:focus {
             outline: none;
@@ -156,16 +168,19 @@
             box-shadow: 0 0 5px $clr-accent-400;
           }
         }
+
+        //textarea field styling
         textarea {
-          height: 200px;
+          height: 180px;
           border: 2px solid;
-          width: 500px;
+          width: 430px;
           padding-left: 55px;
           padding-top: 15px;
           background-color: $clr-nutral-0;
           border-radius: $radius-sm;
-          font-size: $fs-300;
+          font-size: $fs-200;
           resize: none;
+          transition: 200ms ease-in-out;
 
           &:focus {
             outline: none;
@@ -183,15 +198,16 @@
         }
 
         label {
-          font-size: $fs-400;
+          font-size: $fs-300;
           position: absolute;
-          transform: translate(-250px, -10px);
+          transform: translate(-190px, -10px);
           font-weight: $fw-medium;
         }
       }
     }
   }
 
+  //Mobile version stylinh
   @media (max-width: 66.25em) {
     .contactCards {
       grid-template-columns: repeat(1, 30rem);
@@ -203,11 +219,11 @@
 
     .contactForm {
       width: 600px;
-      height: 750px;
+      height: 660px;
 
       .formSVG {
         width: 400px;
-        transform: translate(-248px, 247px);
+        transform: translate(-248px, 200px);
       }
       .form {
         .formButton {

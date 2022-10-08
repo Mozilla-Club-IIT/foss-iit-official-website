@@ -15,13 +15,18 @@ const Hero = () => {
       </div>
 
       <button className={styles.CTA}>Join Us</button>
+
+      {/* Animated scroll button */}
       <div className={styles.arrow}>
         <span></span>
         <span></span>
         <span></span>
       </div>
 
-      <img src={heroBG1} className={styles.heroBG1}></img>
+    {/* Man with laptop SVG */}
+      <img src={heroBG1} className={styles.heroBG1}></img> 
+
+      {/* Girl SVG */}
       <img src={heroBG2} className={styles.heroBG2}></img>
     </div>
   );

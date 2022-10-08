@@ -7,7 +7,6 @@ import EventCarousel from "../eventCarousel";
 function Timelinkcard() {
   return (
     <div className={Styles.container}>
-      <h2>Upcoming Events</h2>
       
         {data.map((data) => (
         <div className={Styles.container}>

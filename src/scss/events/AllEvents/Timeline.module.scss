@@ -1,7 +1,30 @@
 @import "../../presets.scss";
 
 .timeline {
-    width: 10px;
-    height: 200px;
+    width: 5px;
+    height: 100vh;
     background-color: $clr-accent-400;
+    position: relative;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: $clr-accent-400;
+    position: absolute;
+    top: 0;
+    left: -8px;
+}
+
+.timelineObject {
+    display: flex;
+    width: 90vw;
+    justify-content: space-around;
+}
+
+.month {
+    text-align: end;
+    position: absolute;
+    left: -90px;
 }

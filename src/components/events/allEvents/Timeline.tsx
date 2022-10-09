@@ -5,6 +5,7 @@ const Timeline = () => {
   return (
     <div>
         <TimelineObject />
+        <TimelineObject />
     </div>
   )
 }

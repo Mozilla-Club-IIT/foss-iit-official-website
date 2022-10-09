@@ -1,5 +1,9 @@
 @import "../../presets.scss";
 
+.timelineContainer {
+    margin-top: 150px;
+}
+
 .timeline {
     width: 5px;
     height: 110%;
@@ -27,7 +31,14 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
+    // margin-top: 100px;
+    // :nth-child(1) {
+    //         margin-top: 100px;
+
+    // }
 }
+
+
 
 .month {
     text-align: end;

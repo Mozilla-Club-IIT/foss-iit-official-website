@@ -5,9 +5,9 @@ import data from "../../assets/data/aboutUsData";
 
 function TheTeam() {
   return (
-    <div className={Styles.container}>
+    <div id="TheTeam" className={Styles.container}>
       <h2 className={Styles.heading}>The Team</h2>
-      <div className={Styles.teamMembers}>
+      <div  className={Styles.teamMembers}>
         {/* Map through all members include in data file */}
         {data.map((data) => (
           <PersonCard

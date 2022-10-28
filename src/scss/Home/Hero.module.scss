@@ -63,27 +63,30 @@
 
 .arrow {
   position: absolute;
-  bottom: 8vh;
+  bottom: 9vh;
   left: 50%;
+  cursor: pointer;
 }
+//Hero section CTA arrows stlying
 .arrow span {
+  border-radius: 2px;
   display: block;
   width: 25px;
   height: 25px;
   border-bottom: 3.5px solid #000000;
   border-right: 3.5px solid #000000;
-  border-radius: 2px;
   transform: rotate(45deg);
   margin: -15px;
-  animation: animate 2s infinite;
+  animation: animate 2.5s infinite;
+  cursor: pointer;
 }
 
 .arrow span:nth-child(2) {
-  animation-delay: -0.2s;
+  animation-delay: -0.3s;
 }
 
 .arrow span:nth-child(3) {
-  animation-delay: -0.4s;
+  animation-delay: -0.6s;
 }
 
 @keyframes animate {

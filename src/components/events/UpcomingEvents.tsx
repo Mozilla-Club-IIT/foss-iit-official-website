@@ -6,7 +6,7 @@ import EventCarousel from "./eventCarousel";
 
 function UpcomingEvents() {
   return (
-    <div className={Styles.container}>
+    <div id="UpcomingEvents" className={Styles.container}>
       <h2>Upcoming Events</h2>
       <Carousel>
         {data.map((data) => (

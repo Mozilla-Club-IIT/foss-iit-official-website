@@ -12,7 +12,7 @@ import arrow from "../../assets/svg/curved-arrow.svg";
 
 function technologies() {
   return (
-    <div className={Styles.container}>
+    <div  id="technologies" className={Styles.container}>
       <h2>Technologies used</h2>
 
       {/* 4 card section with letters for MERN */}

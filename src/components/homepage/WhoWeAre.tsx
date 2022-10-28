@@ -4,7 +4,7 @@ import WhoWeAreImg from "../../assets/images/whoWeAre.png"
 
 const WhoWeAre = () => {
   return (
-    <div className={styles.container}>
+    <div id="WhoWeAre" className={styles.container}>
         <h1 className={styles.header}>Who We Are</h1>
         <div className={styles.details}>
             <div className={styles.paragraphs}>

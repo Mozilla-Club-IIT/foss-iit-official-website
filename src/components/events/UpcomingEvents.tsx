@@ -1,26 +1,52 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import Styles from "../../scss/events/events.module.scss";
 import Carousel from "../Carousel";
-import data from "../../assets/data/upcomingEventsData";
 import EventCarousel from "./eventCarousel";
 
 function UpcomingEvents() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const request = new Request(
+      `/api/event?sort=date&order=DESC&date=${Date()}&dateOrder=gt`
+    );
+
+    fetch(request)
+      .then((response) => {
+        response.json()
+          .then((jsonData) => {
+            setData(jsonData.data);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+  }, []);
+
   return (
     <div className={Styles.container}>
       <h2>Upcoming Events</h2>
-      <Carousel>
-        {data.map((data) => (
-          <EventCarousel
-            key={data.id}
-            name={data.name}
-            image={data.image}
-            des={data.description}
-            date={data.date}
-            btn={data.buttonTxt}
-            pastEvent={data.pastEvent}
-          />
-        ))}
-      </Carousel>
+      {
+        (data === undefined) ? <></> :
+          <Carousel>
+            {data.map((data: any) => (
+              <EventCarousel
+                key={data.id}
+                name={data.title}
+                image={data.image}
+                des={data.info}
+                date={data.date}
+                btn={data.btnText}
+                link={data.link}
+                pastEvent={false}
+              />
+            ))}
+          </Carousel>
+      }
     </div>
   );
 }

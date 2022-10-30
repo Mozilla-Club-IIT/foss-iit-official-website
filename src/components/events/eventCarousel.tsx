@@ -4,10 +4,11 @@ import Styles from "../../scss/events/eventCarousel.module.scss";
 type propType = {
   key: number;
   name: string;
-  image: string;
+  image?: string;
   des: string;
   date: string;
-  btn: string;
+  btn?: string;
+  link?: string;
   pastEvent: boolean;
 };
 

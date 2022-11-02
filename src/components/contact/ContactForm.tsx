@@ -8,9 +8,25 @@ import { MdOutlinePhone } from "react-icons/md";
 import { FiMessageSquare } from "react-icons/fi";
 import { FaMapSigns } from "react-icons/fa";
 import formsvg from "../../assets/svg/contact-form.svg";
-import { isConstructorDeclaration } from "typescript";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { Value } from "sass";
+
+type Inputs = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+};
 
 function ContactForm() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+
   return (
     <div className={Styles.container}>
       <h1 className={Styles.h1}>CONTACT US</h1>
@@ -20,7 +36,7 @@ function ContactForm() {
 
       {/* ---------Quic access contact cards--------- */}
       <div className={Styles.contactCards}>
-        <a href="http://goo.gl/maps/AsGcfK9bQaGSModB7">
+        <a href="http://goo.gl/maps/AsGcfK9bQaGSModB7" target={'_blank'}>
           <div className={Styles.card}>
             <div className={Styles.cardIcon}>
               <FaMapSigns />
@@ -54,65 +70,107 @@ function ContactForm() {
 
       <div className={Styles.contactForm}>
         <img src={formsvg} alt="form SVG" className={Styles.formSVG} />
-        <form action="" method="get" className={Styles.form}>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          method="get"
+          className={Styles.form}
+        >
           <div className={Styles.inputField}>
-            <label htmlFor="name">Name</label>
-            <BsPerson className={Styles.formIcon} />
-            <input
-              type="text"
-              name="name"
-              id="name"
-              pattern="[a-z]*"
-              placeholder="Your Name"
-              form={Styles.form}
-              required
-            />
+            <div className={Styles.errorContainer}>
+              <label htmlFor="name">Name</label>
+              <div className={Styles.inputIconContainer}>
+                <BsPerson className={Styles.formIcon} />
+                <input
+                  {...register("name", {
+                    required: "Name is required",
+                    pattern: {
+                      value: /^[A-Za-z ]+$/i,
+                      message: "Invalid name",
+                    },
+                  })}
+                  name="name"
+                  id="name"
+                  type="text"
+                  placeholder="Your Name"
+                />
+              </div>
+              <p className={Styles.errorMsg}>{errors.name?.message}</p>
+            </div>
           </div>
 
           <div className={Styles.inputField}>
-            <label htmlFor="email">Email</label>
-            <IoMailOutline className={Styles.formIcon} />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="someone@gmail.com"
-              form={Styles.form}
-              required
-            />
+            <div className={Styles.errorContainer}>
+              <label htmlFor="email">Email</label>
+              <div className={Styles.inputIconContainer}>
+                <IoMailOutline className={Styles.formIcon} />
+                <input
+                  {...register("email", {
+                    required: "Email is required.",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "Wrong email.",
+                    },
+                  })}
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="someone@gmail.com"
+                />
+              </div>
+
+              <p className={Styles.errorMsg}>{errors.email?.message}</p>
+            </div>
           </div>
 
           <div className={Styles.inputField}>
-            <label htmlFor="phone">Phone No.</label>
-            <MdOutlinePhone className={Styles.formIcon} />
-            <input
-              type="tel"
-              name="phone"
-              id="phone"
-              placeholder="+94XXXXXXXXX"
-              form={Styles.form}
-              required
-            />
+            <div className={Styles.errorContainer}>
+              <label htmlFor="phone">Phone No.</label>
+              <div className={Styles.inputIconContainer}>
+                <MdOutlinePhone className={Styles.formIcon} />
+                <input
+                  {...register("phone", {
+                    required: "Phone number is required.",
+                    pattern: {
+                      value:
+                        /^(?:0|94|\+94|0094)?(?:(11|21|23|24|25|26|27|31|32|33|34|35|36|37|38|41|45|47|51|52|54|55|57|63|65|66|67|81|91)(0|2|3|4|5|7|9)|7(0|1|2|4|5|6|7|8)\d)\d{6}$/i,
+                      message: "Wrong phone number.",
+                    },
+                  })}
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="+94XXXXXXXXX"
+                />
+              </div>
+              <p className={Styles.errorMsg}>{errors.phone?.message}</p>
+            </div>
           </div>
 
           <div className={Styles.inputField}>
-            <label htmlFor="textarea">Message</label>
-            <FiMessageSquare className={Styles.formIcon} />
-            <textarea
-              name="textarea"
-              id="textarea"
-              form={Styles.form}
-              required
-            ></textarea>
+            <div className={Styles.errorContainer}>
+              <label htmlFor="textarea">Message</label>
+              <div className={Styles.inputIconContainer}>
+                <FiMessageSquare className={Styles.formIcon} />
+                <textarea
+                  {...register("message", {
+                    required: "You need enter a message",
+                    minLength: {
+                      value: 30,
+                      message: "Message need to contain at least 30 characters",
+                    },
+                  })}
+                  name="message"
+                  id="message"
+                />
+              </div>
+              <p className={Styles.errorMsg}>{errors.message?.message}</p>
+            </div>
           </div>
-          <button
-            form={Styles.form}
+          <input
             type="submit"
             className={Styles.formButton}
             value="Send Message"
-          >
-            Send Message
-          </button>
+          />
         </form>
       </div>
     </div>

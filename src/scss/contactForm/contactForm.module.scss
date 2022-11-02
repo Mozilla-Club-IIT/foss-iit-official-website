@@ -4,7 +4,6 @@
 @mixin social {
   transition: color 0.3s ease;
 }
-
 //Desktop styling
 .container {
   display: flex;
@@ -72,30 +71,32 @@
   .contactForm {
     background-color: $clr-nutral-0;
     border-radius: $radius-sm;
+    position: relative;
     box-shadow: 0px 0px 64px 0px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 700px;
-    height: 630px;
+    padding: 30px 100px;
+    // width: 700px;
+    // height: 630px;
 
     //Contact form "formsvg"  styling
     .formSVG {
       position: absolute;
       width: 420px;
-      transform: translate(-249px, 180px);
+      bottom: 0;
+      left: -150px;
     }
 
     .form {
+      text-align: left;
       display: flex;
       align-items: center;
       flex-direction: column;
-      width: 600px;
 
       //Submit button styling
       .formButton {
         margin-top: 25px;
-        margin-bottom: -5px;
         width: 170px;
         height: 35px;
         border-radius: $radius-sm;
@@ -120,88 +121,97 @@
       .inputField {
         z-index: 1;
         margin-trim: 10px;
+
+        .errorContainer {
+          padding-bottom: 15px;
+
+          .errorMsg {
+            font-size: 12px;
+            color: red;
+            margin-top: 2px;
+          }
+        }
         &:focus-within {
           label {
             color: $clr-nutral-1000;
           }
-          @include social();
-          color: $clr-accent-400;
         }
-        .formIcon {
-          display: flex;
-          transform: translate(15px, 40px);
-          font-size: 27px;
-          pointer-events: none;
-        }
+        .inputIconContainer {
+          margin-top: 5px;
+          position: relative;
+          .formIcon {
+            position: absolute;
+            transform: translate(12px, 12px);
+            font-size: 27px;
+            pointer-events: none;
+          }
 
-        input:-webkit-autofill {
-          -webkit-background-clip: text;
-        }
+          input:-webkit-autofill {
+            -webkit-background-clip: text;
+          }
 
-        input {
-          display: flex;
-          border: 2px solid;
-          width: 430px;
-          height: 50px;
-          padding-left: 55px;
-          margin-bottom: 25px;
-          background-color: $clr-nutral-0;
-          border-radius: $radius-sm;
-          font-size: $fs-200;
-          box-shadow: 0 0 5px transparent;
-          transition: 200ms ease-in-out;
+          input {
+            // display: flex;
+            border: 2px solid;
+            width: 430px;
+            height: 50px;
+            padding-left: 55px;
+            margin-bottom: 2px;
+            // background-color: $clr-nutral-0;
+            border-radius: $radius-sm;
+            font-size: $fs-200;
+            box-shadow: 0 0 5px transparent;
+            transition: 200ms ease-in-out;
 
-          &:focus {
-            outline: none;
-            border: 1px solid $clr-accent-400;
-            box-shadow: 0 0 5px $clr-accent-400;
-            transition: all 0.4s ease;
-            &::-webkit-input-placeholder {
-              @include social();
-              color: $clr-accent-400;
+            &:focus {
+              outline: none;
+              border: 1px solid $clr-nutral-1000;
+              box-shadow: 0 0 5px $clr-nutral-1000;
+              transition: all 0.4s ease;
+            }
+
+            &:hover {
+              transition: 200ms ease;
+              border: 2px solid transparent;
+              box-shadow: 0 0 5px $clr-nutral-1000;
             }
           }
 
-          &:hover {
-            transition: 200ms ease;
-            border: 2px solid transparent;
-            box-shadow: 0 0 5px $clr-accent-400;
+          //textarea field styling
+          textarea {
+            height: 180px;
+            border: 2px solid;
+            width: 430px;
+            padding-left: 55px;
+            padding-top: 15px;
+            background-color: $clr-nutral-0;
+            border-radius: $radius-sm;
+            font-size: $fs-200;
+            resize: none;
+            transition: 200ms ease-in-out;
+
+            &:focus {
+              outline: none;
+              border: 1px solid $clr-nutral-1000;
+              box-shadow: 0 0 5px $clr-nutral-1000;
+              transition: all 0.4s ease;
+            }
+
+            &:hover {
+              transition: 200ms ease;
+              outline: none;
+              border: 2px solid transparent;
+              box-shadow: 0 0 5px $clr-nutral-1000;
+            }
           }
         }
-
-        //textarea field styling
-        textarea {
-          height: 180px;
-          border: 2px solid;
-          width: 430px;
-          padding-left: 55px;
-          padding-top: 15px;
-          background-color: $clr-nutral-0;
-          border-radius: $radius-sm;
-          font-size: $fs-200;
-          resize: none;
-          transition: 200ms ease-in-out;
-
-          &:focus {
-            outline: none;
-            border: 1px solid $clr-accent-400;
-            box-shadow: 0 0 5px $clr-accent-400;
-            transition: all 0.4s ease;
-          }
-
-          &:hover {
-            transition: 200ms ease;
-            outline: none;
-            border: 2px solid transparent;
-            box-shadow: 0 0 5px $clr-accent-400;
-          }
-        }
-
         label {
           font-size: $fs-300;
-          position: absolute;
-          transform: translate(-190px, -10px);
+          text-align: left;
           font-weight: $fw-medium;
+        }
+        p {
+          text-align: left;
         }
       }
     }
@@ -218,42 +228,39 @@
     }
 
     .contactForm {
-      width: 600px;
-      height: 660px;
-
       .formSVG {
         width: 400px;
-        transform: translate(-248px, 200px);
+        left: -120px;
       }
       .form {
         .formButton {
           width: 190px;
           height: 42px;
         }
-
         .inputField {
-          .formIcon {
-            display: flex;
-            transform: translate(15px, 43px);
-            font-size: 30px;
-          }
-          input {
-            width: 450px;
-            height: 55px;
+          .inputIconContainer {
+            .formIcon {
+              display: flex;
+              transform: translate(13px, 13px);
+              font-size: 30px;
+            }
+            input {
+              width: 450px;
+              height: 55px;
 
-            font-size: $fs-300;
-          }
-          textarea {
-            height: 200px;
-            width: 450px;
-            font-size: $fs-300;
-          }
+              font-size: $fs-300;
+            }
+            textarea {
+              height: 200px;
+              width: 450px;
+              font-size: $fs-300;
+            }
 
-          label {
-            font-size: $fs-300;
-            position: absolute;
-            transform: translate(-220px, -2px);
-            font-weight: $fw-medium;
+            label {
+              font-size: $fs-300;
+              // transform: translate(-220px, -2px);
+              font-weight: $fw-medium;
+            }
           }
         }
       }
@@ -271,40 +278,36 @@
 
     .contactForm {
       width: calc(100vw - 2rem);
-      height: 750px;
 
       .formSVG {
-        width: 400px;
-        transform: translate(-228px, 247px);
+        display: none;
       }
       .form {
-        .formButton {
-          width: 165px;
-          height: 32px;
-        }
-
+        
         .inputField {
-          .formIcon {
-            display: flex;
-            transform: translate(15px, 38px);
-            font-size: 25px;
-          }
-          input {
-            width: 450px;
-            height: 50px;
-            font-size: $fs-200;
-          }
-          textarea {
-            height: 200px;
-            width: 450px;
-            font-size: $fs-300;
-          }
+          .inputIconContainer {
+            .formIcon {
+              display: flex;
+              transform: translate(13px, 13px);
+              font-size: 25px;
+            }
+            input {
+              width: 75vw;
+              height: 50px;
+              font-size: $fs-200;
+            }
+            textarea {
+              height: 200px;
+              width: 75vw;
+              font-size: $fs-300;
+            }
 
-          label {
-            font-size: $fs-300;
-            position: absolute;
-            transform: translate(-220px, -2px);
-            font-weight: $fw-medium;
+            label {
+              font-size: $fs-300;
+              // position: absolute;
+              // transform: translate(-220px, -2px);
+              font-weight: $fw-medium;
+            }
           }
         }
       }
@@ -328,7 +331,7 @@
 
     .contactForm {
       width: calc(100vw - 2rem);
-      height: 750px;
+      // height: 750px;
 
       .formSVG {
         display: none;
@@ -340,22 +343,24 @@
         }
 
         .inputField {
-          input {
-            width: 75vw;
-            height: 50px;
-            font-size: $fs-200;
-          }
-          textarea {
-            height: 200px;
-            width: 75vw;
-            font-size: $fs-300;
-          }
+          .inputIconContainer {
+            input {
+              width: 75vw;
+              height: 50px;
+              font-size: $fs-200;
+            }
+            textarea {
+              height: 200px;
+              width: 75vw;
+              font-size: $fs-300;
+            }
 
-          label {
-            font-size: $fs-300;
-            position: absolute;
-            transform: translate(-35vw, -2px);
-            font-weight: $fw-medium;
+            label {
+              font-size: $fs-300;
+              // position: absolute;
+              // transform: translate(-35vw, -2px);
+              font-weight: $fw-medium;
+            }
           }
         }
       }

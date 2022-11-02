@@ -28,9 +28,13 @@ nav {
       align-items: center;
       z-index: 10;
 
-      img {
-        width: $logo-size;
-        height: $logo-size;
+      .logos {
+        display: flex;
+        gap: 0.5rem;
+        img {
+          width: $logo-size;
+          height: $logo-size;
+        }
       }
     }
 

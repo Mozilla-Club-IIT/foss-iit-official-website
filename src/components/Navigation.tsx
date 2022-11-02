@@ -24,11 +24,13 @@ function Navigation() {
               : Styles.navContainer
           }
         >
-          <NavLink to="/" className={Styles.navLogos} onClick={linkClick} end>
-            <img src={mozillaClubLogo} alt="" />
-            <img src={fossLogo} alt="" />
-            <img src={womenFossLogo} alt="" />
-          </NavLink>
+          <div className={Styles.navLogos}>
+            <NavLink className={Styles.logos} to="/" onClick={linkClick} end>
+              <img src={mozillaClubLogo} alt="" />
+              <img src={fossLogo} alt="" />
+              <img src={womenFossLogo} alt="" />
+            </NavLink>
+          </div>
 
           <div
             className={

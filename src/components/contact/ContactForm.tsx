@@ -1,4 +1,3 @@
-import React from "react";
 import Styles from "../../scss/contactForm/contactForm.module.scss";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { HiMailOpen } from "react-icons/hi";
@@ -9,7 +8,6 @@ import { FiMessageSquare } from "react-icons/fi";
 import { FaMapSigns } from "react-icons/fa";
 import formsvg from "../../assets/svg/contact-form.svg";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { Value } from "sass";
 
 type Inputs = {
   name: string;
@@ -22,10 +20,42 @@ function ContactForm() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    console.log(data);
+
+    const headers = new Headers(
+      {
+        "Content-Type": "application/json"
+      }
+    )
+
+    const request = new Request(
+      "/api/message",
+      {
+        method: "POST",
+        headers,
+        body: JSON.stringify(data)
+      }
+    );
+
+    fetch(request)
+      .then((response) => {
+        // Remove this log later
+        console.log(response);
+
+        if (response.status !== 200) {
+          // This will run if the backend rejected the data
+          // Write some code to show an error here!
+          return;
+        }
+
+        // This will only run if the request was successful
+        // Clear the form so that they may send another message if required
+      });
+  };
 
   return (
     <div className={Styles.container}>
@@ -72,7 +102,6 @@ function ContactForm() {
         <img src={formsvg} alt="form SVG" className={Styles.formSVG} />
         <form
           onSubmit={handleSubmit(onSubmit)}
-          method="get"
           className={Styles.form}
         >
           <div className={Styles.inputField}>

@@ -13,8 +13,22 @@ import {
 } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useForm, SubmitHandler } from "react-hook-form";
 
-function footer() {
+type Inputs = {
+  email: string;
+  message: string;
+};
+
+function Footer() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+
   // Scroll to top function when clicking on footer link
   const linkClicked = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -61,15 +75,39 @@ function footer() {
         </div>
 
         {/* ---------- Footer section 3 ---------------- */}
+
         <div className={Styles.section3}>
           <div className={Styles.subscribe}>
             <h4>Subscribe</h4>
-            <div className={Styles.inputSection}>
-              <input type="text" placeholder="Email" className={Styles.email} />
-              <div className={Styles.emailSubBtn}>
-                <BsArrowRight />
-              </div>
-            </div>
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className={Styles.inputSection}
+            >
+              <input
+                {...register("email", {
+                  required: "Email is required.",
+                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                })}
+                name="email"
+                id="email"
+                type="text"
+                placeholder="Email"
+                className={
+                  errors.email
+                    ? `${Styles.email} ${Styles.emailErr}`
+                    : Styles.email
+                }
+              />
+              <input
+                type="submit"
+                className={
+                  errors.email
+                    ? Styles.emailSubBtn
+                    : `${Styles.emailSubBtn} ${Styles.emailCorr}`
+                }
+                value="➜"
+              />
+            </form>
           </div>
 
           {/* Social icons */}
@@ -127,4 +165,4 @@ function footer() {
   );
 }
 
-export default footer;
+export default Footer;

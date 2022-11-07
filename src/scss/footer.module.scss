@@ -97,25 +97,40 @@
 
       .inputSection {
         display: flex;
+
         .email {
           border: none;
           border-radius: $radius-xsm 0 0 $radius-xsm;
           width: 12rem;
           font-size: $fs-100;
           padding: 0 0.5rem;
-          background-color: #f1f1f1;
+          background-color: #dfdfdf;
 
           &:focus {
             outline: none;
           }
         }
+        .emailErr {
+          border: solid red 1px;
+          box-shadow: 1px 1px 8px 0px rgba(255, 0, 0, 0.486) inset;
+        }
+
         .emailSubBtn {
           display: flex;
           color: white;
           background-color: $clr-accent-400;
           border: none;
           border-radius: 0 $radius-xsm $radius-xsm 0;
-          padding: 0.5rem;
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+          transition: background-color 0.2s ease;
+
+          &:hover {
+            background-color: $clr-nutral-1000;
+          }
+        }
+        .emailCorr {
+          background-color: green;
         }
       }
     }

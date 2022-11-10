@@ -9,8 +9,10 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
-  backdrop-filter: blur(1rem);
-  background-color: rgba(255, 255, 255, 0.256);
+  // backdrop-filter: blur(1rem);
+  // background-color: rgba(255, 255, 255, 0.256);
+  background-color: $clr-nutral-0;
+  box-shadow: 0 -2px 8px 0.1px $clr-nutral-700;
   z-index: 10;
 
   .navContainer {

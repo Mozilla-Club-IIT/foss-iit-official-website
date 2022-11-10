@@ -29,20 +29,23 @@
     margin-top: 5rem;
     padding: 0.5rem 2rem;
     font-size: 1em;
-    text-transform: uppercase;
-
     border-radius: $radius-sm;
-    border: 3px $clr-accent-400 solid;
+    border: 3px solid transparent;
     outline: 0;
     background: $clr-accent-400;
     color: $clr-nutral-0;
     cursor: pointer;
     margin-top: 4rem;
-    transition: color 0.3s ease;
+    transition: 200ms ease-in-out;
 
     &:hover {
-      background-color: transparent;
+      // background-color: transparent;
+      // color: $clr-nutral-1000;
+      background-color: $clr-nutral-0;
       color: $clr-nutral-1000;
+      transition: 200ms ease-in-out;
+      border: 3px solid transparent;
+      box-shadow: 0 0 5px $clr-accent-400;
     }
   }
 

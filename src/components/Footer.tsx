@@ -54,7 +54,6 @@ function footer() {
               <a href="#">Contact Us</a>
             </div>
             <div className={Styles.column}>
-              <a href="#">Blog</a>
               <a href="#">FAQ</a>
             </div>
           </div>

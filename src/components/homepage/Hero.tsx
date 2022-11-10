@@ -5,7 +5,6 @@ import heroBG1 from "../../assets/images/homeHero1.png";
 import heroBG2 from "../../assets/images/homeHero2.png";
 
 const Hero = () => {
-
   const ctaClicked = () => {
     const element = document.getElementById("WhoWeAre");
     if (element) {
@@ -22,7 +21,7 @@ const Hero = () => {
         <p className={styles.subText}>Contribute, Inspire and Innovate</p>
       </div>
 
-      <button className={styles.CTA}>Join Us</button>
+      <button className={styles.CTA}>Explore</button>
 
       {/* Animated scroll button */}
       <a onClick={ctaClicked}>

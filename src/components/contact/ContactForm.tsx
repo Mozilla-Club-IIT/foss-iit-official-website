@@ -9,6 +9,7 @@ import { FaMapSigns } from "react-icons/fa";
 import formsvg from "../../assets/svg/contact-form.svg";
 import { useForm, SubmitHandler } from "react-hook-form";
 
+
 type Inputs = {
   name: string;
   email: string;
@@ -87,6 +88,7 @@ function ContactForm() {
           <p>+94 (76) 195 5252</p>
         </div>
 
+        
         <div className={Styles.card}>
           <div className={Styles.cardIcon}>
             <HiMailOpen />

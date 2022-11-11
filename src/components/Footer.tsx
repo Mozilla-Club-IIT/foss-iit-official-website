@@ -8,7 +8,6 @@ import womenFossLogo from "../assets/logos/WIF logo.png";
 import {
   BsFacebook,
   BsInstagram,
-  BsArrowRight,
   BsYoutube,
 } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -24,10 +23,46 @@ function Footer() {
   const {
     register,
     handleSubmit,
-    watch,
+    reset,
+    setError,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    const headers = new Headers(
+      {
+        "Content-Type": "application/json"
+      }
+    )
+
+    const request = new Request(
+      "/api/subscribe",
+      {
+        method: "POST",
+        headers,
+        body: JSON.stringify(data)
+      }
+    );
+
+    fetch(request)
+      .then((response) => {
+        response.json()
+          .then((value) => {
+            if (response.status !== 200) {
+              setError(
+                "email",
+                {
+                  type: "focus",
+                  message: value.error
+                }
+              );
+              return;
+            }
+
+            reset();
+          });
+      });
+  };
 
   // Scroll to top function when clicking on footer link
   const linkClicked = () => {

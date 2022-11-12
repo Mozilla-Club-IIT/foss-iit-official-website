@@ -9,22 +9,28 @@ type propType = {
 
 function Carousel(props: propType) {
   const [currentSlide, setCurrentSlide] = useState(0);
+  // A Ref to the actual HTML DOM Element
+  // This is needed to use native DOM methods
   const cardContainerRef = useRef<HTMLDivElement | null>(null);
 
+  // Event handler for carousel button
   const prevSlide = (e: MouseEvent) => {
     e.preventDefault();
 
     setCurrentSlide((prevState) => {
+      // Roll to the last slide if current slide is the first one
       const slideNum =
         prevState === 0 ? props.children.length - 1 : prevState - 1;
       return slideNum;
     });
   };
 
+  // Event handler for carousel button
   const nextSlide = (e: MouseEvent) => {
     e.preventDefault();
 
     setCurrentSlide((prevState) => {
+      // Roll the first slide if current slide is the last one
       const slideNum =
         prevState === props.children.length - 1 ? 0 : prevState + 1;
       return slideNum;
@@ -33,10 +39,15 @@ function Carousel(props: propType) {
 
   useEffect(() => {
     if (cardContainerRef.current) {
+      // Compute slide length
       const slideLength = Math.round(
         cardContainerRef.current.scrollWidth / props.children.length
       );
+
+      // Distance (px) to scroll
       const slideLeft = slideLength * currentSlide;
+
+      // Native DOM method that can scroll a view
       cardContainerRef.current.scrollTo({
         top: 0,
         left: slideLeft,

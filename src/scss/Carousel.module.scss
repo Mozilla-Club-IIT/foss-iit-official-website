@@ -19,7 +19,6 @@
 
 .cardContainer {
   display: flex;
-  scroll-snap-type: x mandatory;
   overflow: scroll;
 
   border-radius: $radius-sm;
@@ -37,7 +36,6 @@
 .cardContainer > * {
   flex: 0 0 auto;
   width: 100%;
-  scroll-snap-align: center;
 
   background-color: $clr-nutral-0;
 }

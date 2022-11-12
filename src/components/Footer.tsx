@@ -5,11 +5,7 @@ import mozillaClubLogo from "../assets/logos/Mozilla club logo.png";
 import fossLogo from "../assets/logos/FOSS IIT logo.png";
 import womenFossLogo from "../assets/logos/WIF logo.png";
 
-import {
-  BsFacebook,
-  BsInstagram,
-  BsYoutube,
-} from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsYoutube } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -29,40 +25,32 @@ function Footer() {
   } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    const headers = new Headers(
-      {
-        "Content-Type": "application/json"
-      }
-    )
+    const headers = new Headers({
+      "Content-Type": "application/json",
+    });
 
-    const request = new Request(
-      "/api/subscribe",
-      {
-        method: "POST",
-        headers,
-        body: JSON.stringify(data)
-      }
-    );
+    const request = new Request("/api/subscribe", {
+      method: "POST",
+      headers,
+      body: JSON.stringify(data),
+    });
 
-    fetch(request)
-      .then((response) => {
-        response.json()
-          .then((value) => {
-            if (response.status !== 200) {
-              setError(
-                "email",
-                {
-                  type: "focus",
-                  message: value.error
-                }
-              );
-              return;
-            }
-
-            reset();
+    fetch(request).then((response) => {
+      response.json().then((value) => {
+        if (response.status !== 200) {
+          setError("email", {
+            type: "focus",
+            message: value.error,
           });
+          return;
+        }
+
+        reset();
       });
+    });
   };
+
+  console.log(errors.email);
 
   // Scroll to top function when clicking on footer link
   const linkClicked = () => {
@@ -120,7 +108,7 @@ function Footer() {
             >
               <input
                 {...register("email", {
-                  required: "Email is required.",
+                  required: true,
                   pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                 })}
                 name="email"
@@ -133,15 +121,8 @@ function Footer() {
                     : Styles.email
                 }
               />
-              <input
-                type="submit"
-                className={
-                  errors.email
-                    ? Styles.emailSubBtn
-                    : `${Styles.emailSubBtn} ${Styles.emailCorr}`
-                }
-                value="➜"
-              />
+
+              <input type="submit" className={Styles.emailSubBtn} value="➜" />
             </form>
           </div>
 

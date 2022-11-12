@@ -118,7 +118,7 @@
         .emailSubBtn {
           display: flex;
           color: white;
-          background-color: $clr-accent-400;
+          background-color: red;
           border: none;
           border-radius: 0 $radius-xsm $radius-xsm 0;
           padding: 0.5rem 1rem;
@@ -128,9 +128,6 @@
           &:hover {
             background-color: $clr-nutral-1000;
           }
-        }
-        .emailCorr {
-          background-color: green;
         }
       }
     }

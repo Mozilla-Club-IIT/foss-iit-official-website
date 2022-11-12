@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import mozillaClubLogo from "../assets/logos/Mozilla club logo.png";
 import fossLogo from "../assets/logos/FOSS IIT logo.png";
 import womenFossLogo from "../assets/logos/WIF logo.png";
@@ -14,9 +14,16 @@ function Navigation() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" }); // This scrolls the website to the top when user click on a link in nav bar
   };
 
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 50);
+    });
+  }, []);
+
   return (
     <>
-      <nav>
+      <nav className={scroll && !isOpen ? Styles.scrolled : ""}>
         <div
           className={
             isOpen

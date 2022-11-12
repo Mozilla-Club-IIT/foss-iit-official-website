@@ -5,13 +5,18 @@ import heroImg2 from "../../assets/svg/event-hero-image2.svg";
 import { Link } from "react-router-dom";
 
 function EventHero() {
+  const ctaClicked = () => {
+    window.scrollTo({ top: 750, left: 0, behavior: "smooth" }); // This scrolls the website to the top when user click on a link in nav bar
+  };
   return (
     <div className={Styles.container}>
       <h1>EVENTS</h1>
 
       <img src={heroImg1} alt="" className={Styles.img1} />
       <div className={Styles.elementContainer}>
-        <Link to="/all-events"><button className={Styles.eventBtn}>All events</button></Link> 
+        <Link onClick={ctaClicked} to="/all-events">
+          <button className={Styles.eventBtn}>All events</button>
+        </Link>
         <div className={Styles.arrow}>
           <span></span>
           <span></span>

@@ -85,14 +85,20 @@ $line-space: 1rem;
   .personCard {
     flex-direction: row;
     width: 100%;
-    gap: 2rem;
-
+    // gap: 2rem;
+    img {
+      margin-right: 2rem;
+      margin-left: 0;
+    }
     .detailContainer {
       text-align: left;
       align-items: flex-start;
       justify-content: center;
 
       margin-top: 0;
+      p {
+        width: 30rem;
+      }
     }
 
     // Change card style when card has even index number
@@ -100,6 +106,8 @@ $line-space: 1rem;
       justify-content: flex-end;
       img {
         order: 2;
+        margin-left: 2rem;
+        margin-right: 0;
       }
 
       .detailContainer {

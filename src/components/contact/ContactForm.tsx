@@ -21,11 +21,11 @@ function ContactForm() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
 
     const headers = new Headers(
       {
@@ -44,9 +44,6 @@ function ContactForm() {
 
     fetch(request)
       .then((response) => {
-        // Remove this log later
-        console.log(response);
-
         if (response.status !== 200) {
           // This will run if the backend rejected the data
           // Write some code to show an error here!
@@ -55,6 +52,7 @@ function ContactForm() {
 
         // This will only run if the request was successful
         // Clear the form so that they may send another message if required
+        reset();
       });
   };
 

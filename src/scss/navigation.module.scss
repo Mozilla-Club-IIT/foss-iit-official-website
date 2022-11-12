@@ -1,10 +1,11 @@
 @import "./presets.scss";
 
 // Local variables
-$logo-size: 3.5rem;
-$mobile-logo-size: 3rem;
+$logo-size: 3.2rem;
+$mobile-logo-size: 2.6rem;
 
 // Desktop styling
+
 nav {
   position: fixed;
   width: 100%;
@@ -12,12 +13,12 @@ nav {
   // backdrop-filter: blur(1rem);
   // background-color: rgba(255, 255, 255, 0.256);
   background-color: $clr-nutral-0;
-  box-shadow: 0 -2px 8px 0.1px $clr-nutral-700;
+  box-shadow: 0px -20px 30px 0.1px $clr-nutral-700;
   z-index: 10;
 
   .navContainer {
     display: flex;
-    padding: 0.5rem 8%;
+    padding: 1rem 8%;
     justify-content: space-between;
     align-items: center;
     z-index: 10;
@@ -36,6 +37,7 @@ nav {
         img {
           width: $logo-size;
           height: $logo-size;
+          transition: all 0.4s ease;
         }
       }
     }
@@ -102,15 +104,29 @@ nav {
     }
   }
 }
-
+.scrolled {
+  .navContainer {
+    padding: 0.5rem 8%;
+    .navLogos {
+      .logos {
+        img {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+    }
+  }
+}
 // Tablet and mobile styling
 @media (max-width: 50em) {
   nav {
     .navContainer {
       .navLogos {
-        img {
-          width: $mobile-logo-size;
-          height: $mobile-logo-size;
+        .logos {
+          img {
+            width: $mobile-logo-size;
+            height: $mobile-logo-size;
+          }
         }
       }
       .navLinks {
@@ -161,6 +177,19 @@ nav {
       .navLinks {
         right: 0;
         opacity: 1;
+      }
+    }
+  }
+  .scrolled {
+    .navContainer {
+      padding: 0.6rem 8%;
+      .navLogos {
+        .logos {
+          img {
+            width: 2.3rem;
+            height: 2.3rem;
+          }
+        }
       }
     }
   }

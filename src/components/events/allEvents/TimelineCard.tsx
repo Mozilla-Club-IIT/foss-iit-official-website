@@ -7,21 +7,19 @@ import EventCard from "../allEvents/EventCard";
 function Timelinkcard() {
   return (
     <div className={Styles.mainWrapper}>
-      
-        {data.map((data) => (
+      {data.map((data) => (
         <div className={Styles.mainContainer}>
-        <EventCard
+          <EventCard
             key={data.id}
             name={data.name}
-            image={data.image}
             des={data.description}
             date={data.date}
             btn={data.buttonTxt}
             pastEvent={data.pastEvent}
           />
-          </div>
-        ))}
-      </div>
+        </div>
+      ))}
+    </div>
   );
 }
 

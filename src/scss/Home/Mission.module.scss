@@ -1,35 +1,36 @@
 .container {
-    padding: 0 10vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  padding: 0 10vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .header {
-    color: #1E2944;
-    font-size: 3em;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 0px;
-    margin-top: 100px;
+  color: #1e2944;
+  font-size: 3em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 100px;
 
-    @media screen and (max-width: 50em){
-        font-size: 2em;   
-    }
+  @media screen and (max-width: 50em) {
+    font-size: 2em;
+  }
 }
 
 .details {
-    color: #1E2944;
-    display: flex;
-    justify-content: center;
+  color: #1e2944;
+  display: flex;
+  justify-content: center;
 }
 
 .text {
-    width: 80vw;
-    font-size: 1.4em;
-    text-align: center;
+  width: 70vw;
+  font-size: 1.4em;
+  text-align: center;
 
-    @media screen and (max-width: 50em){
-        font-size: 1.2em;   
-    }
+  @media screen and (max-width: 50em) {
+    font-size: 1.2em;
+    width: 80vw;
+  }
 }

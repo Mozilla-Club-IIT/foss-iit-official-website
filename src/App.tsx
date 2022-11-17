@@ -15,6 +15,9 @@ function App() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
+
+  // ================================ Console note ================================================================
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -27,6 +30,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/all-events" element={<AllEvents />} />
         </Routes>
+
         <Footer />
       </BrowserRouter>
     </div>

@@ -11,13 +11,12 @@ const Homepage = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const request = new Request(
-      `/api/event?sort=date&order=DESC`
-    );
+    const request = new Request(`/api/event?sort=date&order=DESC`);
 
     fetch(request)
       .then((response) => {
-        response.json()
+        response
+          .json()
           .then((jsonData) => {
             setData(jsonData.data);
           })
@@ -28,7 +27,6 @@ const Homepage = () => {
       .catch((error) => {
         console.log(error);
       });
-
   }, []);
 
   return (

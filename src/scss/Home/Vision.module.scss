@@ -26,11 +26,12 @@
 }
 
 .text {
-  width: 80vw;
+  width: 70vw;
   font-size: 1.4em;
   text-align: center;
 
   @media screen and (max-width: 50em) {
     font-size: 1.2em;
+    width: 80vw;
   }
 }

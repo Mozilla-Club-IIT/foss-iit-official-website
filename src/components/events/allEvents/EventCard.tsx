@@ -1,4 +1,3 @@
-import React from "react";
 import Styles from "../../../scss/events/AllEvents/EventCard.module.scss";
 
 type propType = {

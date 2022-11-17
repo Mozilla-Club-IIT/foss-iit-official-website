@@ -1,4 +1,3 @@
-import React from "react";
 import Timelinkcard from "./TimelineCard";
 import styles from "../../../scss/events/AllEvents/Timeline.module.scss";
 

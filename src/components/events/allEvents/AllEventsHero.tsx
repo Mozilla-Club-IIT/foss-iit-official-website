@@ -1,4 +1,3 @@
-import React from "react";
 import Styles from "../../../scss/events/AllEvents/AllEventsHero.module.scss";
 import heroImg1 from "../../../assets/svg/event-hero-image1.svg";
 import heroImg2 from "../../../assets/svg/event-hero-image2.svg";

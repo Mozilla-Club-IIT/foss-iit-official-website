@@ -5,8 +5,8 @@ type propType = {
   name: string;
   des: string;
   date: string;
-  btn: string;
-  pastEvent: boolean;
+  btn?: string;
+  link?: string;
 };
 
 function EventCard(props: propType) {
@@ -46,7 +46,9 @@ function EventCard(props: propType) {
           <h3>{props.name}</h3>
           <p>{props.des}</p>
           <div className={Styles.btnContainer}>
-            <button>{props.btn}</button>
+            <a href={props.link} target="_blank">
+              {props.btn}
+            </a>
           </div>
         </div>
       </div>

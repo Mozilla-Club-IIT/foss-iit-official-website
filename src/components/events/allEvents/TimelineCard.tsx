@@ -6,13 +6,12 @@ function Timelinkcard() {
   const [data, setData]: any = useState([]);
 
   useEffect(() => {
-    const request = new Request(
-      "/api/event?sort=date&order=ASC"
-    );
+    const request = new Request("/api/event?sort=date&order=ASC");
 
     fetch(request)
       .then((response) => {
-        response.json()
+        response
+          .json()
           .then((jsonData) => {
             setData(jsonData.data);
           })
@@ -21,10 +20,9 @@ function Timelinkcard() {
           });
       })
       .catch((error) => {
-        console.log(error)
+        console.log(error);
       });
   }, []);
-
 
   return (
     <div className={Styles.mainWrapper}>
@@ -36,7 +34,7 @@ function Timelinkcard() {
             des={data.info}
             date={data.date}
             btn={data.btnText}
-            pastEvent={true}
+            link={data.link}
           />
         </div>
       ))}

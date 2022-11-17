@@ -61,7 +61,9 @@ function eventCarousel(props: propType) {
         </div>
 
         <div className={Styles.btnContainer}>
-          <button>{props.btn}</button>
+          <a href={props.link} target="_blank">
+            {props.btn}
+          </a>
         </div>
       </div>
     </div>

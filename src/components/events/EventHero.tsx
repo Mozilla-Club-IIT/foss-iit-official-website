@@ -10,9 +10,7 @@ function EventHero() {
 
       <img src={heroImg1} alt="" className={Styles.img1} />
       <div className={Styles.elementContainer}>
-        <button className={Styles.eventBtn}>All events</button>
-        {/* Animated scroll button */}
-        <a onClick={ctaClicked}>
+
           <div className={Styles.arrow}>
             <span></span>
             <span></span>

@@ -1,0 +1,127 @@
+@import "../../presets.scss";
+
+// Mobile styling
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 85vh;
+
+  .img1 {
+    width: 60%;
+    padding-top: 10%;
+  }
+
+  .elementContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img2 {
+    display: none;
+  }
+
+  .eventBtn {
+    margin-top: 5rem;
+    padding: 0.5rem 2rem;
+    font-size: 1em;
+    text-transform: uppercase;
+
+    border-radius: $radius-sm;
+    border: 3px $clr-accent-400 solid;
+    outline: 0;
+    background: $clr-accent-400;
+    color: $clr-nutral-0;
+    cursor: pointer;
+    margin-top: 4rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      background-color: transparent;
+      color: $clr-nutral-1000;
+    }
+  }
+
+  // Tablet styling
+  @media (min-width: 36em) {
+    .img1 {
+      width: 18rem;
+      padding-top: 3rem;
+    }
+    .eventBtn {
+      margin-top: 3rem;
+    }
+
+    .arrow {
+      margin-top: 4rem;
+    }
+  }
+
+  // Dekstop styling
+  @media (min-width: 50em) {
+    .img1 {
+      position: absolute;
+      bottom: 0;
+      left: -8%;
+      width: 38vw;
+    }
+    .img2 {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: -10%;
+      width: 38vw;
+    }
+    .eventBtn {
+      padding: 0.8rem 3.8rem;
+      font-size: 1.4em;
+      margin-top: 3rem;
+    }
+    .elementContainer {
+      margin-top: 5rem;
+      gap: 2rem;
+      .arrow {
+        position: absolute;
+        bottom: 10vh;
+      }
+    }
+  }
+}
+.arrow {
+  margin-top: 4rem;
+}
+.arrow span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-bottom: 3.5px solid #000000;
+  border-right: 3.5px solid #000000;
+  transform: rotate(45deg);
+  margin: -15px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}

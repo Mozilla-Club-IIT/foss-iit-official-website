@@ -1,0 +1,183 @@
+@import "../../presets.scss";
+
+// Mobile styling
+.container {
+  display: flex;
+  align-items: center;
+  // width: 90vw;
+  // box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+  // margin-bottom: 2rem;
+  width: calc(100vw - 2rem);
+
+  .timeline {
+    // width: 10px;
+    height: 100%;
+    padding: 10px;
+    background-color: red;
+  }
+
+  .eventDate {
+    padding-right: 1rem;
+    p {
+      line-height: 1.1;
+      text-align: center;
+      &:nth-child(1) {
+        font-size: 1rem;
+        padding-top: 1rem;
+        font-weight: $fw-semibold;
+        line-height: 0.8;
+      }
+      &:nth-child(2) {
+        font-size: 1rem;
+        font-weight: $fw-medium;
+      }
+
+      &:nth-child(3) {
+        font-size: 0.9rem;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+  .pastEvent {
+    background-color: #464646;
+  }
+}
+.detailContainer {
+  position: relative;
+  padding: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: solid 0.25rem $clr-accent-400;
+
+  &::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 3px solid $clr-accent-400;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 50%;
+  }
+  .eventDetails {
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.178);
+
+    padding: 1rem;
+    border-radius: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .btnContainer {
+      padding-top: 1rem;
+      button {
+        background-color: $clr-accent-400;
+        border: solid $clr-accent-400 2px;
+        border-radius: 0.3rem;
+        padding: 0.2rem 1.2rem;
+        font-size: 0.8rem;
+        color: $clr-nutral-0;
+        cursor: pointer;
+        transition: color ease 0.3s;
+
+        &:hover {
+          background-color: transparent;
+          color: $clr-nutral-1000;
+        }
+      }
+    }
+  }
+}
+
+// Tablet styling
+@media (min-width: 36em) {
+  .container {
+    width: 33rem;
+
+    .eventDate {
+      p {
+        text-align: center;
+        &:nth-child(1) {
+          font-size: 1.4rem;
+          padding-top: 1rem;
+          font-weight: $fw-semibold;
+          line-height: 0.8;
+        }
+        &:nth-child(2) {
+          font-size: 1.1rem;
+          font-weight: $fw-medium;
+        }
+
+        &:nth-child(3) {
+          font-size: 1rem;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+    .eventDetails {
+      padding-left: 1rem;
+      .btnContainer {
+        button {
+          padding: 0.3rem 1.5rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+// Desktop sizing
+@media (min-width: 40em) {
+  .container {
+    width: 38rem;
+
+    .eventDate {
+      padding-right: 2rem;
+      p {
+        text-align: center;
+        &:nth-child(1) {
+          font-size: 1.8rem;
+          padding-top: 1rem;
+          font-weight: $fw-semibold;
+          line-height: 0.8;
+        }
+        &:nth-child(2) {
+          font-size: 1.4rem;
+          font-weight: $fw-medium;
+        }
+
+        &:nth-child(3) {
+          font-size: 1.3rem;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+    .detailContainer {
+      padding-left: 2rem;
+      .eventDetails {
+        flex: 7;
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        height: auto;
+
+        .btnContainer {
+          display: flex;
+          button {
+            border-radius: 1rem;
+
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 60em) {
+  .container {
+    width: 45rem;
+    .eventDate {
+      padding-right: 2rem;
+    }
+  }
+}

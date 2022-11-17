@@ -1,0 +1,58 @@
+@import "../../presets.scss";
+
+.timelineContainer {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.timeline {
+    width: 5px;
+    height: 110%;
+    background-color: $clr-accent-400;
+    position: relative;
+    margin-right: 30px;
+    position: absolute;
+    left: 20%;
+    top: 0;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: $clr-accent-400;
+    position: absolute;
+    top: 0;
+    left: -8px;
+}
+
+.timelineObject {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    // margin-top: 100px;
+    // :nth-child(1) {
+    //         margin-top: 100px;
+
+    // }
+}
+
+
+
+.month {
+    text-align: end;
+    position: absolute;
+    left: -70px;
+    font-size: 1.2em;
+    font-weight: 600;
+    width: min-content;
+}
+
+// Desktop sizing
+@media (min-width: 40em) {
+    .timeline {
+        left: 15%;
+    }
+}

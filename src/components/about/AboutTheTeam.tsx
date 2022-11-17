@@ -6,13 +6,12 @@ function TheTeam() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const request = new Request(
-      `/api/member`
-    );
+    const request = new Request(`/api/member`);
 
     fetch(request)
       .then((response) => {
-        response.json()
+        response
+          .json()
           .then((jsonData) => {
             setData(jsonData.data);
           })
@@ -23,12 +22,11 @@ function TheTeam() {
       .catch((error) => {
         console.log(error);
       });
-
   }, []);
 
   return (
     <div id="TheTeam" className={Styles.container}>
-      <h2 className={Styles.heading}>The Team</h2>
+      <h2 className={Styles.heading}>Board of Officials</h2>
       <div className={Styles.teamMembers}>
         {/* Map through all members retrieved from backend */}
         {data.map((data: any) => (

@@ -10,7 +10,7 @@ function hero() {
   };
   return (
     <div className={Styles.container}>
-      <h1 className={Styles.h1}>Get to know the team !</h1>
+      <h1 className={Styles.h1}>Get to know the committee !</h1>
       {/* Team SVG */}
       <img className={Styles.heroSVG} src={heroSVG} alt="" />
       {/* CTA arrows animation */}

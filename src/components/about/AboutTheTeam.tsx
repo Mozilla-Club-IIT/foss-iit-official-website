@@ -36,7 +36,7 @@ function TheTeam() {
             image={data.image}
             position={data.position}
             quote={data.quote}
-            fb={data.facebook}
+            be={data.facebook}
             twt={data.twitter}
             in={data.linkedin}
             insta={data.instagram}

@@ -32,6 +32,8 @@ nav {
       .logos {
         display: flex;
         gap: 0.5rem;
+        animation: 0.85s alternate appear;
+
         img {
           width: $logo-size;
           height: $logo-size;

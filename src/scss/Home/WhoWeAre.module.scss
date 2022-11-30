@@ -1,3 +1,5 @@
+@import "../presets.scss";
+
 .container {
   padding: 10vh 5vw;
   display: flex;
@@ -44,6 +46,7 @@
 .whoWeAreImg {
   width: 20vw;
   height: 20vw;
+  animation: 0.85s alternate appear;
 
   @media screen and (max-width: 70em) {
     display: none;

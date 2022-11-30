@@ -37,3 +37,13 @@ $radius-xsm: 5px;
 $radius-sm: 16px;
 $radius-md: 32px;
 $radius-xsm: 5px;
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

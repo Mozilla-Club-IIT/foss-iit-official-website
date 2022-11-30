@@ -21,7 +21,9 @@ const Hero = () => {
         <p className={styles.subText}>Contribute, Inspire and Innovate</p>
       </div>
 
-      <button className={styles.CTA}>Explore</button>
+      <button onClick={ctaClicked} className={styles.CTA}>
+        Explore
+      </button>
 
       {/* Animated scroll button */}
       <a onClick={ctaClicked}>

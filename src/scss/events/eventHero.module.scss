@@ -12,6 +12,7 @@
   .img1 {
     width: 60%;
     padding-top: 10%;
+    animation: 0.85s alternate appear;
   }
 
   .elementContainer {
@@ -23,6 +24,7 @@
 
   .img2 {
     display: none;
+    animation: 0.85s alternate appear;
   }
 
   .eventBtn {

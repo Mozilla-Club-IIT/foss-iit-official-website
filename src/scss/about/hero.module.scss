@@ -19,8 +19,12 @@
     width: 500px;
     padding: 2.5rem 0;
     margin-bottom: 1.5rem;
+    animation: 0.85s alternate appear;
   }
   //Hero section CTA arrows stlying
+  .arrow {
+    animation: 1s alternate appear;
+  }
   .arrow span {
     border-radius: 2px;
     display: block;

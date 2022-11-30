@@ -39,7 +39,7 @@
     cursor: pointer;
     margin-top: 4rem;
     transition: 200ms ease-in-out;
-    box-shadow: 0 0 5px $clr-nutral-700;
+    // box-shadow: 0 0 5px $clr-nutral-700;
 
     &:hover {
       // background-color: transparent;
@@ -47,8 +47,8 @@
       background-color: $clr-nutral-0;
       color: $clr-nutral-1000;
       transition: 200ms ease-in-out;
-      border: 3px solid transparent;
-      box-shadow: 0 0 5px $clr-accent-400;
+      border: 3px solid $clr-accent-400;
+      // box-shadow: 0 0 5px $clr-accent-400;
     }
   }
 

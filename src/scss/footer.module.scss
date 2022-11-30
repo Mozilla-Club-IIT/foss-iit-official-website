@@ -111,14 +111,14 @@
           }
         }
         .emailErr {
-          border: solid red 1px;
+          border: solid $clr-accent-400 1px;
           box-shadow: 1px 1px 8px 0px rgba(255, 0, 0, 0.486) inset;
         }
 
         .emailSubBtn {
           display: flex;
           color: white;
-          background-color: red;
+          background-color: $clr-accent-400;
           border: none;
           border-radius: 0 $radius-xsm $radius-xsm 0;
           padding: 0.5rem 1rem;
@@ -227,7 +227,6 @@
     &:hover {
       color: $clr-nutral-1000;
       transition: 200ms ease-in-out;
-      
     }
   }
 }

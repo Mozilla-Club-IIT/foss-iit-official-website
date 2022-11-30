@@ -103,17 +103,17 @@
         background: $clr-accent-400;
         font-weight: $fw-bold;
         color: $clr-nutral-0;
-        border: 2px solid transparent;
+        border: 2px solid $clr-accent-400;
         z-index: 1;
-        box-shadow: 0 0 5px $clr-nutral-700;
+        // box-shadow: 0 0 5px $clr-nutral-700;
         transition: 200ms ease-in-out;
 
         &:hover {
           background-color: $clr-nutral-0;
           color: $clr-nutral-1000;
-       transition: 200ms ease-in-out;
-          border: 2px solid transparent;
-          box-shadow: 0 0 5px $clr-accent-400;   
+          transition: 200ms ease-in-out;
+          border: 2px solid $clr-accent-400;
+          // box-shadow: 0 0 5px $clr-accent-400;
           cursor: pointer;
         }
       }

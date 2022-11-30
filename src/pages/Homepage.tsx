@@ -11,7 +11,7 @@ const Homepage = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const request = new Request(`/api/event?sort=date&order=DESC`);
+    const request = new Request(`/api/homeevent?sort=date&order=DESC`);
 
     fetch(request)
       .then((response) => {

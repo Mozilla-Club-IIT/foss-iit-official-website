@@ -59,7 +59,7 @@ const teamData = [
     twt: "",
     in: "https://www.linkedin.com/in/chamidu-amarasinghe-87a83b1b0",
     insta: "https://www.instagram.com/not_a_pickaxe/",
-    git: "https://www.github.com",
+    git: "https://github.com/chamindujs",
     be: "",
     yt: "",
   },

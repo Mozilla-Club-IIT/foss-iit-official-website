@@ -7,7 +7,7 @@ import womenFossLogo from "../assets/logos/WIF logo.png";
 
 import { BsFacebook, BsInstagram, BsYoutube } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
@@ -83,12 +83,10 @@ function Footer() {
           {/* Need to route all these links */}
           <div className={Styles.linkColumns}>
             <div className={Styles.column}>
-              <a href="#">Join Us</a>
-              <a href="#">Events</a>
-              <Link onClick={linkClicked} to="/about">
-                About
-              </Link>
-              <a href="#">Contact Us</a>
+              <NavLink to="#" onClick={linkClicked} >Join Us</NavLink>
+              <NavLink to="events" onClick={linkClicked} >Events</NavLink>
+              <NavLink to="about" onClick={linkClicked} >About</NavLink>
+              <NavLink to="contact" onClick={linkClicked} >Contact Us</NavLink>
             </div>
             <div className={Styles.column}>
               <a href="#">FAQ</a>

@@ -47,5 +47,21 @@ const teamData = [
     be: "",
     yt: "",
   },
+  {
+    id: 4,
+    name: "Chamidu Amarasinghe",
+    image:
+      "https://cdn.discordapp.com/attachments/892739127534043166/1076502536254652567/b2e.png",
+    position: "Developer",
+    quote:
+      "You learn new tech because it helps your portfolio, I learn because the logo looks cool. We're not the same.",
+
+    twt: "",
+    in: "https://www.linkedin.com/in/chamidu-amarasinghe-87a83b1b0",
+    insta: "https://www.instagram.com/not_a_pickaxe/",
+    git: "https://www.github.com",
+    be: "",
+    yt: "",
+  },
 ];
 export default teamData;

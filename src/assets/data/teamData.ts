@@ -33,19 +33,19 @@ const teamData = [
   },
   {
     id: 3,
-    name: "Ada Lovelace",
+    name: "Abrar Ahmed",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/0/0b/Ada_Byron_daguerreotype_by_Antoine_Claudet_1843_or_1850.jpg",
+      "https://avatars.githubusercontent.com/u/69783006?v=4",
     position: "Developer",
     quote:
-      "Understand well as I may, my comprehension can only be an infinitesimal fraction of all I want to understand.",
+      "Forgive me, for I have created bugs.",
 
-    twt: "https://www.twitter.com",
-    in: "https://www.linkedin.com",
-    insta: "https://www.instagram.com",
-    git: "https://www.github.com",
-    be: "https://www.facebook.com",
-    yt: "https://www.youtube.com",
+    twt: "",
+    in: "https://www.linkedin.com/in/abrar-ahmed-028368255/",
+    insta: "https://www.instagram.com/abrar_sl_/",
+    git: "https://www.github.com/AbrarSL",
+    be: "",
+    yt: "",
   },
 ];
 export default teamData;

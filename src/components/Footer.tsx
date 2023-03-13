@@ -83,15 +83,32 @@ function Footer() {
           {/* Need to route all these links */}
           <div className={Styles.linkColumns}>
             <div className={Styles.column}>
-              <a href="#">Join Us</a>
-              <a href="#">Events</a>
               <Link onClick={linkClicked} to="/about">
                 About
               </Link>
-              <a href="#">Contact Us</a>
+              <Link onClick={linkClicked} to="/events">
+                Events
+              </Link>
+              <Link onClick={linkClicked} to="/all-events">
+                Timeline
+              </Link>
+              <Link onClick={linkClicked} to="/about">
+                About
+              </Link>
             </div>
             <div className={Styles.column}>
-              <a href="#">FAQ</a>
+              <Link onClick={linkClicked} to="/contact">
+                Contact Us
+              </Link>
+              <Link onClick={linkClicked} to="/devs">
+                Devs
+              </Link>
+              {/* <Link onClick={linkClicked} to="/about">
+                About
+              </Link>
+              <Link onClick={linkClicked} to="/about">
+                About
+              </Link> */}
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@ import womenFossLogo from "../assets/logos/WIF logo.png";
 
 import { BsFacebook, BsInstagram, BsYoutube } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {

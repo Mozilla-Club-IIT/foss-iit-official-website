@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/foss-iit-official-website/static/css/main.54deb2b1.css",
+    "main.js": "/foss-iit-official-website/static/js/main.69e7d841.js",
+    "static/js/787.0a66066f.chunk.js": "/foss-iit-official-website/static/js/787.0a66066f.chunk.js",
+    "static/media/background.svg": "/foss-iit-official-website/static/media/background.c3f6c762aa11d52a8fd5.svg",
+    "static/media/FOSS IIT logo.png": "/foss-iit-official-website/static/media/FOSS IIT logo.bd69c7fa517184a32c3a.png",
+    "static/media/WIF logo.png": "/foss-iit-official-website/static/media/WIF logo.10fad0cb7cc568b72694.png",
+    "static/media/Mozilla club logo.png": "/foss-iit-official-website/static/media/Mozilla club logo.e792943873196b29a3ed.png",
+    "static/media/homeHero2.png": "/foss-iit-official-website/static/media/homeHero2.5db649ce836dc2f0bdeb.png",
+    "static/media/team.svg": "/foss-iit-official-website/static/media/team.2f909184ac1b124d0800893caa0a499e.svg",
+    "static/media/about-page.svg": "/foss-iit-official-website/static/media/about-page.b07acfb4f937e1271a60c8fc3e189b09.svg",
+    "static/media/whoWeAre.png": "/foss-iit-official-website/static/media/whoWeAre.aca70fa8d0ec8fde4563.png",
+    "static/media/homeHero1.png": "/foss-iit-official-website/static/media/homeHero1.a5033417fd8454a024b8.png",
+    "static/media/curved-arrow.svg": "/foss-iit-official-website/static/media/curved-arrow.43d03e0ef39d54296a7aaaab18a9eeee.svg",
+    "static/media/event-hero-image2.svg": "/foss-iit-official-website/static/media/event-hero-image2.89be55d8f22633608b4060ac970fd636.svg",
+    "static/media/contact-form.svg": "/foss-iit-official-website/static/media/contact-form.57f5feab32d678e58c66a552fd2187e6.svg",
+    "static/media/event-hero-image1.svg": "/foss-iit-official-website/static/media/event-hero-image1.ca4280eab38702c2c7c42ec29788c463.svg",
+    "static/media/sass-logo.svg": "/foss-iit-official-website/static/media/sass-logo.a54dfef88e39b359182d8fdfa8ebd050.svg",
+    "static/media/react-logo.svg": "/foss-iit-official-website/static/media/react-logo.cc511cfa4fa6938b341192bb2403241f.svg",
+    "static/media/nodejs-logo.svg": "/foss-iit-official-website/static/media/nodejs-logo.ac793e983d3edffecf809730a1805bcd.svg",
+    "static/media/typescript-logo.svg": "/foss-iit-official-website/static/media/typescript-logo.78ee19a4e739e233b14a98ac2e9e6cd6.svg",
+    "static/media/express-logo.svg": "/foss-iit-official-website/static/media/express-logo.0d6582433d59a914e20bdd679710dd1e.svg",
+    "index.html": "/foss-iit-official-website/index.html",
+    "static/media/mongodb-logo.svg": "/foss-iit-official-website/static/media/mongodb-logo.36dd21899b6b0abac091619cff0af796.svg",
+    "main.54deb2b1.css.map": "/foss-iit-official-website/static/css/main.54deb2b1.css.map",
+    "main.69e7d841.js.map": "/foss-iit-official-website/static/js/main.69e7d841.js.map",
+    "787.0a66066f.chunk.js.map": "/foss-iit-official-website/static/js/787.0a66066f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54deb2b1.css",
+    "static/js/main.69e7d841.js"
+  ]
+}

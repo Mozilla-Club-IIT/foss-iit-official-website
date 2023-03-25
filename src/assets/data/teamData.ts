@@ -5,10 +5,11 @@ const teamData = [
     id: 1,
     name: "Ravindu Senarathna",
     image:
-      "https://media.discordapp.net/attachments/722044824974262282/1042775856998776862/Ravindu.jpg",
+      "https://media.discordapp.net/attachments/1057745624046501929/1087726441187266590/20230219_072456_2.jpg?width=756&height=676",
     position: "Developer",
     quote: "Watch some anime, read some manga, trust me bro you'll love it.",
-    twt: "https://twitter.com/ravindusenruwan",
+    portfolio: "https://revengerx.dev/",
+    twt: "",
     in: "https://www.linkedin.com/in/ravindusenruwan/",
     insta: "",
     git: "https://github.com/MrRevengerX",
@@ -24,6 +25,7 @@ const teamData = [
     quote:
       'One day ladies will take their computers for walks in the park and tell each other, "My little computer said such a funny thing this morning".',
 
+    portfolio: "",
     twt: "",
     in: "https://www.linkedin.com/in/devmalwije",
     insta: "",
@@ -34,12 +36,10 @@ const teamData = [
   {
     id: 3,
     name: "Abrar Ahmed",
-    image:
-      "https://avatars.githubusercontent.com/u/69783006?v=4",
+    image: "https://avatars.githubusercontent.com/u/69783006?v=4",
     position: "Developer",
-    quote:
-      "Forgive me, for I have created bugs.",
-
+    quote: "Forgive me, for I have created bugs.",
+    portfolio: "",
     twt: "",
     in: "https://www.linkedin.com/in/abrar-ahmed-028368255/",
     insta: "https://www.instagram.com/abrar_sl_/",
@@ -55,7 +55,7 @@ const teamData = [
     position: "Developer",
     quote:
       "You learn new tech because it helps your portfolio, I learn because the logo looks cool. We're not the same.",
-
+    portfolio: "",
     twt: "",
     in: "https://www.linkedin.com/in/chamidu-amarasinghe-87a83b1b0",
     insta: "https://www.instagram.com/not_a_pickaxe/",

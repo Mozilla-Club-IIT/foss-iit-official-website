@@ -4,6 +4,7 @@ import Styles from "../scss/personCard.module.scss";
 import { BsTwitter, BsInstagram, BsGithub, BsYoutube } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { ImBehance } from "react-icons/im";
+import { FiGlobe } from "react-icons/fi";
 
 // Specifying types of the props
 type propType = {
@@ -13,6 +14,7 @@ type propType = {
   position: string;
   quote: string;
   be: string;
+  port: string;
   twt: string;
   in: string;
   insta: string;
@@ -33,6 +35,16 @@ function PersonCard(props: propType) {
         <div className={Styles.socialIcons}>
           {/* Shows social icons for avalible social links */}
 
+          {props.port && (
+            <a
+              href={props.port}
+              target="_blank"
+              rel="noreferrer"
+              className={Styles.icon}
+            >
+              <FiGlobe className={Styles.twitterIcon} />
+            </a>
+          )}
           {props.twt && (
             <a
               href={props.twt}

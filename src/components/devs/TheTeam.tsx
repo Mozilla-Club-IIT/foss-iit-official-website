@@ -17,6 +17,7 @@ function TheTeam() {
             position={data.position}
             quote={data.quote}
             be={data.be}
+            port={data.portfolio}
             twt={data.twt}
             in={data.in}
             insta={data.insta}

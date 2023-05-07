@@ -6,27 +6,15 @@ import WhoWeAre from "../components/homepage/WhoWeAre";
 import Carousel from "../components/Carousel";
 import ImgCarousel from "../components/homepage/ImgCarousel";
 import { useState, useEffect } from "react";
+import { getPeople } from "../lib/api";
 
 const Homepage = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const request = new Request(`/api/homeevent?sort=date&order=DESC`);
+    getPeople().then((people)=>{
 
-    fetch(request)
-      .then((response) => {
-        response
-          .json()
-          .then((jsonData) => {
-            setData(jsonData.data);
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    })
   }, []);
 
   return (

@@ -1,28 +1,15 @@
 import { useState, useEffect } from "react";
 import Styles from "../../scss/meet-devs/theTeam.module.scss";
 import PersonCard from "../PersonCard";
+import { useQuery } from "@tanstack/react-query";
+import { getPeople } from "../../lib/api";
 
 function TheTeam() {
-  const [data, setData] = useState([]);
+  const { data, isLoading } = useQuery(["people"], getPeople);
 
-  useEffect(() => {
-    const request = new Request(`/api/member`);
-
-    fetch(request)
-      .then((response) => {
-        response
-          .json()
-          .then((jsonData) => {
-            setData(jsonData.data);
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+  if (isLoading) {
+    return null;
+  }
 
   return (
     <div id="TheTeam" className={Styles.container}>
@@ -31,7 +18,7 @@ function TheTeam() {
         {/* Map through all members retrieved from backend */}
         {data.map((data: any) => (
           <PersonCard
-            key={data.id}
+            key={data._id}
             name={data.name}
             image={data.image}
             position={data.position}

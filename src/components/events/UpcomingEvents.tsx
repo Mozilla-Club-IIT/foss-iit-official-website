@@ -1,14 +1,14 @@
 import Styles from "../../scss/events/events.module.scss";
 import Carousel from "../Carousel";
 import EventCarousel from "./eventCarousel";
-import { upcomingEventsData } from "../../assets/data/eventsData";
+import { EventData, upcomingEventsData } from "../../assets/data/eventsData";
 
 function UpcomingEvents() {
   return (
     <div id="UpcomingEvents" className={Styles.container}>
       <h2>Upcoming Events</h2>
       <Carousel>
-        {upcomingEventsData.map((data: any) => (
+        {upcomingEventsData.map((data: EventData) => (
           <EventCarousel
             key={data.id}
             name={data.name}

@@ -4,7 +4,7 @@ import Vision from "../components/homepage/Vision";
 import WhoWeAre from "../components/homepage/WhoWeAre";
 import Carousel from "../components/Carousel";
 import ImgCarousel from "../components/homepage/ImgCarousel";
-import data from "../assets/data/upcomingEventsData";
+import { EventData, upcomingEventsData } from "../assets/data/eventsData";
 
 const Homepage = () => {
   return (
@@ -12,7 +12,7 @@ const Homepage = () => {
       <Hero />
       <WhoWeAre />
       <Carousel>
-        {data.map((data: any) => (
+        {upcomingEventsData.map((data: EventData) => (
           <ImgCarousel
             key={data.id}
             name={data.name}

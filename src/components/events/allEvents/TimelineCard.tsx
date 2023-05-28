@@ -1,11 +1,11 @@
 import Styles from "../../../scss/events/AllEvents/EventCard.module.scss";
 import EventCard from "../allEvents/EventCard";
-import { eventsData } from "../../../assets/data/eventsData";
+import { EventData, eventsData } from "../../../assets/data/eventsData";
 
 function Timelinkcard() {
   return (
     <div className={Styles.mainWrapper}>
-      {eventsData.map((data: any) => (
+      {eventsData.map((data: EventData) => (
         <div key={data.id} className={Styles.mainContainer}>
           <EventCard
             key={data.id}

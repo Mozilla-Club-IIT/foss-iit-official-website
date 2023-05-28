@@ -3,7 +3,9 @@
 // Mobile styling
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .carousel {
@@ -17,9 +19,20 @@
   display: none;
 }
 
+.indicatorContainer {
+  display: flex;
+}
+
+.selectedIndicator {
+  opacity: 0.5;
+}
+
 .cardContainer {
   display: flex;
   overflow: scroll;
+
+  // This is needed to stop our currentSlide number from becoming negative
+  overscroll-behavior-x: none;
 
   border-radius: $radius-sm;
   box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);

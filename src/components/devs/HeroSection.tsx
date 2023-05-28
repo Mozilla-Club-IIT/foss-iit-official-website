@@ -1,6 +1,4 @@
-import React from "react";
 import teamImage from "../../assets/svg/team.svg";
-import scrollIcon from "../../assets/svg/scroll.svg";
 import Styles from "../../scss/meet-devs/heroSection.module.scss";
 
 function HeroSection() {
@@ -11,6 +9,7 @@ function HeroSection() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <div className={Styles.container}>
       <h1 className={Styles.h1}>Meet the devs</h1>

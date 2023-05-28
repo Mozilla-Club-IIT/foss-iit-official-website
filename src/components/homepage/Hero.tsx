@@ -1,6 +1,4 @@
-import React from "react";
 import styles from "../../scss/Home/Hero.module.scss";
-import scrollDown from "../../assets/images/CTAarrows.png";
 import heroBG1 from "../../assets/images/homeHero1.png";
 import heroBG2 from "../../assets/images/homeHero2.png";
 
@@ -12,6 +10,7 @@ const Hero = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <div className={styles.heroContainer}>
       <div className={styles.heroTitle}>

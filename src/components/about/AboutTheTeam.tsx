@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Styles from "../../scss/meet-devs/theTeam.module.scss";
 import PersonCard from "../PersonCard";
 import { useQuery } from "@tanstack/react-query";

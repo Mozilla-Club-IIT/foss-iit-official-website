@@ -1,4 +1,3 @@
-import React from "react";
 import Styles from "../scss/footer.module.scss";
 
 import mozillaClubLogo from "../assets/logos/Mozilla club logo.png";
@@ -7,50 +6,50 @@ import womenFossLogo from "../assets/logos/WIF logo.png";
 
 import { BsFacebook, BsInstagram, BsYoutube } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
-import { Link, NavLink } from "react-router-dom";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { Link } from "react-router-dom";
+// import { useForm, SubmitHandler } from "react-hook-form";
 
-type Inputs = {
-  email: string;
-  message: string;
-};
+// type Inputs = {
+//   email: string;
+//   message: string;
+// };
 
 function Footer() {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    setError,
-    formState: { errors },
-  } = useForm<Inputs>();
-
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
-    const headers = new Headers({
-      "Content-Type": "application/json",
-    });
-
-    const request = new Request("/api/subscribe", {
-      method: "POST",
-      headers,
-      body: JSON.stringify(data),
-    });
-
-    fetch(request).then((response) => {
-      response.json().then((value) => {
-        if (response.status !== 200) {
-          setError("email", {
-            type: "focus",
-            message: value.error,
-          });
-          return;
-        }
-
-        reset();
-      });
-    });
-  };
-
-  console.log(errors.email);
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   reset,
+  //   setError,
+  //   formState: { errors },
+  // } = useForm<Inputs>();
+  //
+  // const onSubmit: SubmitHandler<Inputs> = (data) => {
+  //   const headers = new Headers({
+  //     "Content-Type": "application/json",
+  //   });
+  //
+  //   const request = new Request("/api/subscribe", {
+  //     method: "POST",
+  //     headers,
+  //     body: JSON.stringify(data),
+  //   });
+  //
+  //   fetch(request).then((response) => {
+  //     response.json().then((value) => {
+  //       if (response.status !== 200) {
+  //         setError("email", {
+  //           type: "focus",
+  //           message: value.error,
+  //         });
+  //         return;
+  //       }
+  //
+  //       reset();
+  //     });
+  //   });
+  // };
+  //
+  // console.log(errors.email);
 
   // Scroll to top function when clicking on footer link
   const linkClicked = () => {
@@ -119,23 +118,13 @@ function Footer() {
           <div className={Styles.subscribe}>
             <h4>Subscribe</h4>
             <form
-              onSubmit={handleSubmit(onSubmit)}
               className={Styles.inputSection}
             >
               <input
-                {...register("email", {
-                  required: true,
-                  pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                })}
                 name="email"
                 id="email"
                 type="text"
                 placeholder="Email"
-                className={
-                  errors.email
-                    ? `${Styles.email} ${Styles.emailErr}`
-                    : Styles.email
-                }
               />
 
               <input type="submit" className={Styles.emailSubBtn} value="➜" />

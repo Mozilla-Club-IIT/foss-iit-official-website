@@ -1,4 +1,3 @@
-import React from "react";
 import Styles from "../../scss/Home/imgCarousel.module.scss";
 
 type propType = {
@@ -7,6 +6,7 @@ type propType = {
   image: string;
   des: string;
 };
+
 function ImgCarousel(prop: propType) {
   return (
     <div className={Styles.container}>

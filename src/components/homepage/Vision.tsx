@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../../scss/Home/Vision.module.scss";
 
 const Vision = () => {

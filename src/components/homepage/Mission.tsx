@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../../scss/Home/Mission.module.scss";
 
 const Mission = () => {

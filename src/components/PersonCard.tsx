@@ -1,4 +1,3 @@
-import React from "react";
 import Styles from "../scss/personCard.module.scss";
 
 import { BsTwitter, BsInstagram, BsGithub, BsYoutube } from "react-icons/bs";

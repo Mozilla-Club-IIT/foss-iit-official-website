@@ -1,4 +1,3 @@
-import React from "react";
 import Styles from "../../scss/events/eventHero.module.scss";
 import heroImg1 from "../../assets/svg/event-hero-image1.svg";
 import heroImg2 from "../../assets/svg/event-hero-image2.svg";
@@ -8,6 +7,7 @@ function EventHero() {
   const ctaClicked = () => {
     window.scrollTo({ top: 750, left: 0, behavior: "smooth" }); // This scrolls the website to the top when user click on a link in nav bar
   };
+
   return (
     <div className={Styles.container}>
       <h1>EVENTS</h1>

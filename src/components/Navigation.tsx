@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import mozillaClubLogo from "../assets/logos/Mozilla club logo.png";
 import fossLogo from "../assets/logos/FOSS IIT logo.png";
 import womenFossLogo from "../assets/logos/WIF logo.png";

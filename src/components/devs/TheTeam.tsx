@@ -1,4 +1,3 @@
-import React from "react";
 import Styles from "../../scss/meet-devs/theTeam.module.scss";
 import PersonCard from "../PersonCard";
 import data from "../../assets/data/teamData";

@@ -7,54 +7,54 @@ import { MdOutlinePhone } from "react-icons/md";
 import { FiMessageSquare } from "react-icons/fi";
 import { FaMapSigns } from "react-icons/fa";
 import formsvg from "../../assets/svg/contact-form.svg";
-import { useForm, SubmitHandler } from "react-hook-form";
+// import { useForm, SubmitHandler } from "react-hook-form";
 
 
-type Inputs = {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-};
+// type Inputs = {
+//   name: string;
+//   email: string;
+//   phone: string;
+//   message: string;
+// };
 
 function ContactForm() {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<Inputs>();
-
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
-
-    const headers = new Headers(
-      {
-        "Content-Type": "application/json"
-      }
-    )
-
-    const request = new Request(
-      "/api/message",
-      {
-        method: "POST",
-        headers,
-        body: JSON.stringify(data)
-      }
-    );
-
-    fetch(request)
-      .then((response) => {
-        if (response.status !== 200) {
-          // This will run if the backend rejected the data
-          // Write some code to show an error here!
-          return;
-        }
-
-        // This will only run if the request was successful
-        // Clear the form so that they may send another message if required
-        reset();
-      });
-  };
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   reset,
+  //   formState: { errors },
+  // } = useForm<Inputs>();
+  //
+  // const onSubmit: SubmitHandler<Inputs> = (data) => {
+  //
+  //   const headers = new Headers(
+  //     {
+  //       "Content-Type": "application/json"
+  //     }
+  //   )
+  //
+  //   const request = new Request(
+  //     "/api/message",
+  //     {
+  //       method: "POST",
+  //       headers,
+  //       body: JSON.stringify(data)
+  //     }
+  //   );
+  //
+  //   fetch(request)
+  //     .then((response) => {
+  //       if (response.status !== 200) {
+  //         // This will run if the backend rejected the data
+  //         // Write some code to show an error here!
+  //         return;
+  //       }
+  //
+  //       // This will only run if the request was successful
+  //       // Clear the form so that they may send another message if required
+  //       reset();
+  //     });
+  // };
 
   return (
     <div className={Styles.container}>
@@ -86,7 +86,7 @@ function ContactForm() {
           <p>+94 (76) 195 5252</p>
         </div>
 
-        
+
         <div className={Styles.card}>
           <div className={Styles.cardIcon}>
             <HiMailOpen />
@@ -101,7 +101,6 @@ function ContactForm() {
       <div className={Styles.contactForm}>
         <img src={formsvg} alt="form SVG" className={Styles.formSVG} />
         <form
-          onSubmit={handleSubmit(onSubmit)}
           className={Styles.form}
         >
           <div className={Styles.inputField}>
@@ -110,20 +109,12 @@ function ContactForm() {
               <div className={Styles.inputIconContainer}>
                 <BsPerson className={Styles.formIcon} />
                 <input
-                  {...register("name", {
-                    required: "Name is required",
-                    pattern: {
-                      value: /^[A-Za-z ]+$/i,
-                      message: "Invalid name",
-                    },
-                  })}
                   name="name"
                   id="name"
                   type="text"
                   placeholder="Your Name"
                 />
               </div>
-              <p className={Styles.errorMsg}>{errors.name?.message}</p>
             </div>
           </div>
 
@@ -133,21 +124,12 @@ function ContactForm() {
               <div className={Styles.inputIconContainer}>
                 <IoMailOutline className={Styles.formIcon} />
                 <input
-                  {...register("email", {
-                    required: "Email is required.",
-                    pattern: {
-                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: "Wrong email.",
-                    },
-                  })}
                   type="text"
                   name="email"
                   id="email"
                   placeholder="someone@gmail.com"
                 />
               </div>
-
-              <p className={Styles.errorMsg}>{errors.email?.message}</p>
             </div>
           </div>
 
@@ -157,21 +139,12 @@ function ContactForm() {
               <div className={Styles.inputIconContainer}>
                 <MdOutlinePhone className={Styles.formIcon} />
                 <input
-                  {...register("phone", {
-                    required: "Phone number is required.",
-                    pattern: {
-                      value:
-                        /^(?:0|94|\+94|0094)?(?:(11|21|23|24|25|26|27|31|32|33|34|35|36|37|38|41|45|47|51|52|54|55|57|63|65|66|67|81|91)(0|2|3|4|5|7|9)|7(0|1|2|4|5|6|7|8)\d)\d{6}$/i,
-                      message: "Wrong phone number.",
-                    },
-                  })}
                   type="tel"
                   name="phone"
                   id="phone"
                   placeholder="+94XXXXXXXXX"
                 />
               </div>
-              <p className={Styles.errorMsg}>{errors.phone?.message}</p>
             </div>
           </div>
 
@@ -181,18 +154,10 @@ function ContactForm() {
               <div className={Styles.inputIconContainer}>
                 <FiMessageSquare className={Styles.formIcon} />
                 <textarea
-                  {...register("message", {
-                    required: "You need enter a message",
-                    minLength: {
-                      value: 30,
-                      message: "Message need to contain at least 30 characters",
-                    },
-                  })}
                   name="message"
                   id="message"
                 />
               </div>
-              <p className={Styles.errorMsg}>{errors.message?.message}</p>
             </div>
           </div>
           <input

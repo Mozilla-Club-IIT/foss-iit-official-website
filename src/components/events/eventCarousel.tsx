@@ -1,4 +1,3 @@
-import React from "react";
 import Styles from "../../scss/events/eventCarousel.module.scss";
 
 type propType = {

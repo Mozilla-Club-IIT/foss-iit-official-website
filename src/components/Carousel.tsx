@@ -1,7 +1,7 @@
 import { MouseEvent, UIEvent, useEffect, useRef, useState } from "react";
 import Styles from "../scss/Carousel.module.scss";
 
-import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
+import { MdArrowForwardIos, MdArrowBackIos, MdCircle } from "react-icons/md";
 
 type propType = {
   children: JSX.Element[];
@@ -55,6 +55,8 @@ function Carousel(props: propType) {
       setCurrentSlide(slideNum);
 
       // Hack to force the useEffect hook to fire even if currentSlide doesn't change
+      // currentSlide might not change if the amount scrolled is too small to change the integer
+      // number after rounding
       setForceEffect((prevState) => {
         return !prevState;
       });
@@ -80,6 +82,10 @@ function Carousel(props: propType) {
     }
   }, [currentSlide, forceEffect, props.children]);
 
+  // Setup indicator elements and apply style for selected indicator
+  let indicators: JSX.Element[] = props.children.map(() => <div><MdCircle /></div>);
+  indicators[currentSlide] = <div className={Styles.selectedIndicator}><MdCircle /></div>;
+
   return (
     <div className={Styles.container}>
       <div>{currentSlide}</div>
@@ -101,6 +107,9 @@ function Carousel(props: propType) {
         <button className={Styles.carouselButton} onClick={nextSlide}>
           <MdArrowForwardIos />
         </button>
+      </div>
+      <div className={Styles.indicatorContainer}>
+        {indicators}
       </div>
     </div>
   );

@@ -1,21 +1,21 @@
 import Styles from "../../scss/events/events.module.scss";
 import Carousel from "../Carousel";
 import EventCarousel from "./eventCarousel";
-import data from "../../assets/data/pastEventsData";
+import { pastEventsData } from "../../assets/data/eventsData";
 
 function PastEvents() {
   return (
     <div className={Styles.container}>
       <h2>Past Events</h2>
       <Carousel>
-        {data.map((data: any) => (
+        {pastEventsData.map((data: any) => (
           <EventCarousel
             key={data.id}
             name={data.name}
             image={data.image}
             des={data.description}
             date={data.date}
-            btn={data.buttonTxt}
+            btn={data.buttonText}
             link={data.link}
             pastEvent={true}
           />

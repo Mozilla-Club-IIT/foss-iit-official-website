@@ -1,4 +1,4 @@
-// Event data that will be used throughout the site
+//  Event data that will be used throughout the site
 // Events must contain the following data in the following format
 
 export type EventData = {

@@ -11,7 +11,7 @@ const Homepage = () => {
     <div>
       <Hero />
       <WhoWeAre />
-      <Carousel>
+      {/* <Carousel>
         {upcomingEventsData.map((data: EventData) => (
           <ImgCarousel
             key={data.id}
@@ -20,7 +20,7 @@ const Homepage = () => {
             des={data.description}
           />
         ))}
-      </Carousel>
+      </Carousel> */}
       <Mission />
       <Vision />
     </div>

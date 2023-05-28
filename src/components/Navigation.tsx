@@ -90,6 +90,18 @@ function Navigation() {
             </li>
             <li>
               <NavLink
+                to="/wif"
+                className={({ isActive }) =>
+                  isActive ? `${Styles.active}` : undefined
+                }
+                onClick={linkClick}
+                end
+              >
+               WIF
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="/contact"
                 className={({ isActive }) =>
                   isActive ? `${Styles.active}` : undefined

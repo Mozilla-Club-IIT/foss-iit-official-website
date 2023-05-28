@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import AllEvents from "./pages/AllEvents";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Wif from "./pages/Wif";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,8 @@ function App() {
             <Route path="/devs" element={<MeetDevs />} />
             <Route path="/events" element={<Events />} />
             <Route path="/all-events" element={<AllEvents />} />
+            <Route path="/wif" element={<Wif/>} />
+            {/* <Route path="*" element={<h1>404 Not Found</h1>} /> */}
           </Routes>
           <Footer />
         </BrowserRouter>

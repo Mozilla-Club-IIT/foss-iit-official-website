@@ -6,13 +6,13 @@ function Timelinkcard() {
   return (
     <div className={Styles.mainWrapper}>
       {eventsData.map((data: any) => (
-        <div className={Styles.mainContainer}>
+        <div key={data.id} className={Styles.mainContainer}>
           <EventCard
             key={data.id}
             name={data.name}
             des={data.description}
             date={data.date}
-            btn={data.buttonTxt}
+            btn={data.buttonText}
             link={data.link}
           />
         </div>

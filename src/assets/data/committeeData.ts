@@ -110,15 +110,15 @@ export const committeeData: CommitteeData[] = [
   {
     id: 7,
     name: "Abrar Ahmed ",
-    image: "committee_images/abrar_ahmed_evil.png",
+    image: "https://avatars.githubusercontent.com/u/69783006?v=4",
     position: "Director Membership & Club Growth ",
-    quote: "",
-    behance: "https://www.behance.com",
-    twitter: "https://www.twitter.com",
-    linkedin: "https://www.linkedin.com",
-    instagram: "https://www.instagram.com",
-    github: "https://www.github.com",
-    youtube: "https://www.youtube.com",
+    quote: "Forgive me, for I have created bugs.",
+    behance: "",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/abrar-ahmed-028368255/",
+    instagram: "https://www.instagram.com/abrar_sl_/",
+    github: "https://www.github.com/AbrarSL",
+    youtube: "",
   },
   {
     id: 8,
@@ -214,4 +214,4 @@ export const committeeWifData: CommitteeData[] = [
     github: "https://www.github.com",
     youtube: "https://www.youtube.com",
   },
-]; ;
+];;

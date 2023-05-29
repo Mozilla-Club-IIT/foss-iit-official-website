@@ -1,7 +1,7 @@
-import { MouseEvent, useEffect, useRef, useState } from "react";
+import { MouseEvent, UIEvent, useEffect, useRef, useState } from "react";
 import Styles from "../scss/Carousel.module.scss";
 
-import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
+import { MdArrowForwardIos, MdArrowBackIos, MdCircle } from "react-icons/md";
 
 type propType = {
   children: JSX.Element[];
@@ -9,6 +9,8 @@ type propType = {
 
 function Carousel(props: propType) {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [forceEffect, setForceEffect] = useState(true);
+
   // A Ref to the actual HTML DOM Element
   // This is needed to use native DOM methods
   const cardContainerRef = useRef<HTMLDivElement | null>(null);
@@ -37,6 +39,30 @@ function Carousel(props: propType) {
     });
   };
 
+  // Event handler for swipes
+  const swipeSlide = (e: UIEvent) => {
+    if (cardContainerRef.current) {
+      // Compute slide length
+      const slideLength = Math.round(
+        cardContainerRef.current.scrollWidth / props.children.length
+      );
+
+      // Compute current slide number based on scroll position
+      const slideNum = Math.round(
+        cardContainerRef.current.scrollLeft / slideLength
+      );
+
+      setCurrentSlide(slideNum);
+
+      // Hack to force the useEffect hook to fire even if currentSlide doesn't change
+      // currentSlide might not change if the amount scrolled is too small to change the integer
+      // number after rounding
+      setForceEffect((prevState) => {
+        return !prevState;
+      });
+    }
+  }
+
   useEffect(() => {
     if (cardContainerRef.current) {
       // Compute slide length
@@ -54,7 +80,11 @@ function Carousel(props: propType) {
         behavior: "smooth",
       });
     }
-  }, [currentSlide, props.children]);
+  }, [currentSlide, forceEffect, props.children]);
+
+  // Setup indicator elements and apply style for selected indicator
+  let indicators: JSX.Element[] = props.children.map(() => <div><MdCircle /></div>);
+  indicators[currentSlide] = <div className={Styles.selectedIndicator}><MdCircle /></div>;
 
   return (
     <div className={Styles.container}>
@@ -69,12 +99,16 @@ function Carousel(props: propType) {
             }
           }}
           className={Styles.cardContainer}
+          onTouchEnd={swipeSlide}
         >
           {props.children}
         </div>
         <button className={Styles.carouselButton} onClick={nextSlide}>
           <MdArrowForwardIos />
         </button>
+      </div>
+      <div className={Styles.indicatorContainer}>
+        {indicators}
       </div>
     </div>
   );

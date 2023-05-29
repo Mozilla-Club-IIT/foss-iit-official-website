@@ -30,7 +30,16 @@ export const eventsData: EventData[] = [
     date: "2022-12-25",
     link: "https://www.example.com",
     buttonText: "Learn More",
-  }
+  },
+  {
+    id: 3,
+    name: "AngularCon Sri Lanka 2023",
+    image: "events_images/react_con_sl_2023.png",
+    description: "The first ever ReactCon to happen in Sri Lanka!",
+    date: "2023-07-12",
+    link: "https://www.example.com",
+    buttonText: "Learn More",
+  },
 ].sort((a, b) => {
   const aDate = new Date(a.date);
   const bDate = new Date(b.date);

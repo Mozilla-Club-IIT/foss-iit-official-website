@@ -13,7 +13,7 @@ const Wif = () => {
   return (
     <div>
       <div className={Styles.container}>
-        <h1 className={Styles.h1}>Get to know the committee of WIF !</h1>
+        <h1 className={Styles.h1}>Women in FOSS Community of IIT !</h1>
         {/* Team SVG */}
         <img className={Styles.heroSVG} src={heroSVG} alt="" />
         {/* CTA arrows animation */}

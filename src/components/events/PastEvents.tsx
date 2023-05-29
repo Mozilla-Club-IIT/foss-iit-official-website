@@ -2,8 +2,7 @@ import Styles from "../../scss/events/events.module.scss";
 // import Carousel from "../Carousel";
 import EventCarousel from "./eventCarousel";
 import { EventData, pastEventsData } from "../../assets/data/eventsData";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import Carousel from "../Carousel";
 
 function PastEvents() {
   const responsive = {
@@ -28,7 +27,7 @@ function PastEvents() {
   return (
     <div className={Styles.container}>
       <h2>Past Events</h2>
-      <Carousel responsive={responsive}>
+      <Carousel>
         {pastEventsData.map((data: EventData) => (
           <EventCarousel
             key={data.id}
@@ -38,7 +37,7 @@ function PastEvents() {
             date={data.date}
             btn={data.buttonText}
             link={data.link}
-            pastEvent={true}
+            pastEvent={false}
           />
         ))}
       </Carousel>

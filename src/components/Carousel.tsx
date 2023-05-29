@@ -88,7 +88,6 @@ function Carousel(props: propType) {
 
   return (
     <div className={Styles.container}>
-      <div>{currentSlide}</div>
       <div className={Styles.carousel}>
         <button className={Styles.carouselButton} onClick={prevSlide}>
           <MdArrowBackIos />

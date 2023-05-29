@@ -16,7 +16,7 @@ const Hero = () => {
       <div className={styles.heroTitle}>
         <h1 className={styles.mozillaText}>MOZILLA CAMPUS CLUB</h1>
         <h2 className={styles.andText}>AND</h2>
-        <h1 className={styles.FOSSText}>FOSS Community Of IIT</h1>
+        <h1 className={styles.FOSSText}>FOSS COMMUNITY OF IIT</h1>
         <p className={styles.subText}>Contribute, Inspire and Innovate</p>
       </div>
 

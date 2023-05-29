@@ -30,6 +30,7 @@
 .cardContainer {
   display: flex;
   overflow: scroll;
+  scroll-snap-type: x mandatory;
 
   // This is needed to stop our currentSlide number from becoming negative
   overscroll-behavior-x: none;
@@ -49,6 +50,7 @@
 .cardContainer > * {
   flex: 0 0 auto;
   width: 100%;
+  scroll-snap-align: center;
 
   background-color: $clr-nutral-0;
 }

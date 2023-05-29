@@ -19,7 +19,7 @@ export const committeeData: CommitteeData[] = [
   {
     id: 0,
     name: "Sahan Dissanayake",
-    image: "committee_images/abrar_ahmed.png",
+    image: "committee_images/sahan_dissanayake.jpeg",
     position: "President ",
     quote: "",
     behance: "https://www.behance.com",
@@ -32,7 +32,7 @@ export const committeeData: CommitteeData[] = [
   {
     id: 1,
     name: "Sachith Wickramasekara",
-    image: "committee_images/abrar_ahmed_evil.png",
+    image: "committee_images/sachith_wickramasekara.jpeg",
     position: "Vice President",
     quote: "",
     behance: "https://www.behance.com",
@@ -45,7 +45,7 @@ export const committeeData: CommitteeData[] = [
   {
     id: 2,
     name: "Bhagya Semage",
-    image: "committee_images/abrar_ahmed.png",
+    image: "committee_images/bhagya_semage.jpeg",
     position: "Secretary ",
     quote: "",
     behance: "https://www.behance.com",
@@ -58,7 +58,7 @@ export const committeeData: CommitteeData[] = [
   {
     id: 3,
     name: "Vinuja Jayathilake",
-    image: "committee_images/abrar_ahmed_evil.png",
+    image: "committee_images/vinuja_jayathilaka.jpeg",
     position: "Treasurer",
     quote: "",
     behance: "https://www.behance.com",
@@ -71,7 +71,7 @@ export const committeeData: CommitteeData[] = [
   {
     id: 4,
     name: "Devmal Wijesinghe",
-    image: "committee_images/abrar_ahmed.png",
+    image: "committee_images/devmal_wijesinghe.jpeg",
     position: "Director of Events",
     quote: "",
     behance: "https://www.behance.com",
@@ -84,7 +84,7 @@ export const committeeData: CommitteeData[] = [
   {
     id: 5,
     name: "Ravindu Senarathna",
-    image: "committee_images/abrar_ahmed_evil.png",
+    image: "committee_images/ravindu_senarathna.jpeg",
     position: "Director PR & Media",
     quote: "",
     behance: "https://www.behance.com",
@@ -97,7 +97,7 @@ export const committeeData: CommitteeData[] = [
   {
     id: 6,
     name: "Punsara Deshapriya",
-    image: "committee_images/abrar_ahmed.png",
+    image: "committee_images/punsara_deshapriya.jpeg",
     position: "Director PR & Media",
     quote: "",
     behance: "https://www.behance.com",
@@ -110,7 +110,7 @@ export const committeeData: CommitteeData[] = [
   {
     id: 7,
     name: "Abrar Ahmed ",
-    image: "https://avatars.githubusercontent.com/u/69783006?v=4",
+    image: "committee_images/abrar_ahmed.jpeg",
     position: "Director Membership & Club Growth ",
     quote: "Forgive me, for I have created bugs.",
     behance: "",
@@ -123,7 +123,7 @@ export const committeeData: CommitteeData[] = [
   {
     id: 8,
     name: "Shakthi Warnakulasooriya",
-    image: "committee_images/abrar_ahmed.png",
+    image: "committee_images/shakthi_warnakulasooriya.jpeg",
     position: "Editor ",
     quote: "",
     behance: "https://www.behance.com",
@@ -136,7 +136,7 @@ export const committeeData: CommitteeData[] = [
   {
     id: 9,
     name: "Pansilu Wijesiri",
-    image: "committee_images/abrar_ahmed_evil.png",
+    image: "committee_images/pansilu_wijesiri.jpeg",
     position: "Director Community Engagement ",
     quote: "JavaScript is excellent.",
     behance: "https://www.behance.com",
@@ -149,7 +149,7 @@ export const committeeData: CommitteeData[] = [
   {
     id: 10,
     name: "Manupa Samarawickrama",
-    image: "committee_images/abrar_ahmed_evil.png",
+    image: "committee_images/manupa_samarawickrama.jpeg",
     position: "Director of IT",
     quote: "JavaScript is excellent.",
     behance: "https://www.behance.com",
@@ -165,7 +165,7 @@ export const committeeWifData: CommitteeData[] = [
   {
     id: 1,
     name: "Bhagya Semage",
-    image: "committee_images/abrar_ahmed_evil.png",
+    image: "committee_images/bhagya_semage.jpeg",
     position: "Chairperson",
     quote: "",
     behance: "https://www.behance.com",
@@ -178,7 +178,7 @@ export const committeeWifData: CommitteeData[] = [
   {
     id: 8,
     name: "Stefania Hapuarachchi",
-    image: "committee_images/abrar_ahmed.png",
+    image: "committee_images/stefania_hapuarachchi.jpeg",
     position: "Vice Chairperson",
     quote: "",
     behance: "https://www.behance.com",
@@ -191,7 +191,7 @@ export const committeeWifData: CommitteeData[] = [
   {
     id: 9,
     name: "Buddhima Fernando ",
-    image: "committee_images/abrar_ahmed_evil.png",
+    image: "committee_images/buddhima_fernando.jpeg",
     position: "Secretary ",
     quote: "JavaScript is excellent.",
     behance: "https://www.behance.com",
@@ -204,7 +204,7 @@ export const committeeWifData: CommitteeData[] = [
   {
     id: 10,
     name: "Nadul Jayasundera",
-    image: "committee_images/abrar_ahmed_evil.png",
+    image: "committee_images/nadul_jayasundara.jpeg",
     position: "Director of Events",
     quote: "JavaScript is excellent.",
     behance: "https://www.behance.com",
@@ -214,4 +214,4 @@ export const committeeWifData: CommitteeData[] = [
     github: "https://www.github.com",
     youtube: "https://www.youtube.com",
   },
-];;
+];
